@@ -1,0 +1,45 @@
+{
+	"require": {
+		"timber/timber": "^2.0",
+		"twig/html-extra": "^3.8",
+		"twig/intl-extra": "^3.8",
+		"19h47/wp-get-theme": "dev-master"
+	},
+	"name": "19h47/celia-aubry",
+	"description": "WordPress Theme for Célia Aubry",
+	"type": "wordpress-theme",
+	"authors": [
+		{
+			"name": "Jérémy Levron",
+			"email": "jeremylevron@19h47.fr"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"CeliaAubry\\": "./includes"
+		},
+		"files": [
+			"./includes/helpers.php",
+			"./vendor/19h47/wp-get-theme/wp-get-theme.php"
+		]
+	},
+	"config": {
+		"allow-plugins": {
+			"composer/installers": true
+		}
+	},
+	"repositories": [
+		{
+			"type": "package",
+			"package": {
+				"name": "19h47/wp-get-theme",
+				"version": "master",
+				"source": {
+					"url": "https://gist.github.com/806c10bd977aa63929dd14e2035e9d28.git",
+					"type": "git",
+					"reference": "main"
+				}
+			}
+		}
+	]
+}
