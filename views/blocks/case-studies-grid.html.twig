@@ -1,0 +1,38 @@
+{#
+ # Blocks: Case Studies Grid
+ #}
+
+{% set args = {
+	post_type: 'case_study',
+	posts_per_page: -1,
+} %}
+
+{%- if block.categories -%}
+	{% set args = args | merge(
+		{
+			tax_query: [
+				{
+					taxonomy: 'case_study_cat',
+					terms: block.categories,
+				}
+			]
+		}
+	) %}
+{%- endif -%}
+
+<div class="py-10 xl:py-20 bg-neutral-900 text-white space-y-6 xl:space-y-10">
+	{%- if block.title -%}
+		<div class="container">
+			<h2 class="h3">{{- block.title -}}</h2>
+		</div>
+	{%- endif -%}
+	<div class="container grid grid-cols-12 gap-6 xl:gap-10">
+		{%- for post in get_posts( args ) -%}
+			<div class="col-span-12 xl:col-span-6">
+				{{- include( 'components/tease-case-study.html.twig', { post: post } ) -}}
+			</div>
+		{%- else -%}
+			<div class="col-span-12 xl:col-span-6">{{- __( 'No case studies to display', 'celia-aubry' ) -}}</div>
+		{%- endfor -%}
+	</div>
+</div>

@@ -1,0 +1,35 @@
+{#
+ # Blocks: Gallery
+ #}
+
+{% set background_color = {
+	dark: 'bg-neutral-900 text-white',
+	beige: 'bg-brand-beige',
+	light: 'bg-white',
+} %}
+
+<div class="{{ html_classes( 'py-10 xl:py-20', background_color[ block.background_color ] ) }}">
+
+	{%- if block.title or block.content -%}
+		<div class="container mb-10 space-y-4">
+			{{- block.title ? '<h2 class="h3">' ~ block.title ~ '</h2>' : '' -}}
+			<div class="wysiwyg">{{- block.content -}}</div>
+		</div>
+	{%- endif -%}
+
+	<div class="container grid grid-cols-2 gap-4">
+		{% for image in block.images %}
+			<div class="{{ html_classes( 'rounded-[1.25rem] overflow-hidden col-span-2', loop.first ? '' : 'xl:col-span-1' ) }}">
+				{{-
+					include(
+						'components/image.html.twig',
+						{
+							image: image,
+							classes: [ 'object-cover', loop.first ? 'aspect-video' : 'aspect-square' ]
+						}
+					)
+				-}}
+			</div>
+		{% endfor %}
+	</div>
+</div>

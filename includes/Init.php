@@ -20,17 +20,27 @@ class Init {
 	 */
 	public static function get_services(): array {
 		return array(
+			Theme::class,
 			Setup\Enqueue::class,
 			Setup\Settings::class,
 			Setup\Context::class,
-			Setup\Twig::class,
 			Setup\NavMenu::class,
-			Setup\Supports::class,
-			Setup\Textdomain::class,
-			Setup\WordPress::class,
 			Setup\QueryVars::class,
+			Setup\Textdomain::class,
+			Setup\Twig::class,
+			Setup\WordPress::class,
+			Post\CaseStudy::class,
+			Post\Post::class,
 			PostTemplate\BodyClass::class,
-			Vite::class
+			Taxonomy\CaseStudyCat::class,
+			Taxonomy\CaseStudyTag::class,
+			Template\PostStates::class,
+			Plugins\ACF\IncludeFields\BlocksFields::class,
+			Plugins\ACF\IncludeFields\CaseStudyCatFields::class,
+			Plugins\ACF\IncludeFields\CaseStudyFields::class,
+			Plugins\ACF\IncludeFields\ContactPageFields::class,
+			Plugins\ACF\IncludeFields\FrontPageFields::class,
+			Vite::class,
 		);
 	}
 

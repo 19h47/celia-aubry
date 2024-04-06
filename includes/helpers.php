@@ -59,5 +59,7 @@ function html_class( $class = '' ): string {
  * @access public
  */
 function get_webfonts(): array {
-	return array();
+	return array(
+		'inria-sans' => '//fonts.googleapis.com/css2?family=Inria+Sans:wght@400;700&display=block'
+	);
 }

@@ -1,0 +1,22 @@
+{#
+ # Blocks: Timeline
+ #}
+
+{%- if block.items -%}
+	<div class="{{ html_classes( 'py-10 xl:py-20 bg-brand-beige' ) }}">
+		{%- if block.title -%}
+			<div class="container mb-6 xl:mb-10 space-y-4">
+				{{- block.title ? '<h2 class="h3">' ~ block.title ~ '</h2>' : '' -}}
+			</div>
+		{%- endif -%}
+
+		<div class="container divide-y divide-neutral-200">
+			{% for item in block.items %}
+				<div class="{{ html_classes( 'xl:grid xl:grid-cols-12 xl:items-center xl:gap-4', loop.first ? 'pb-6' : ( loop.last ? 'pt-6' : 'py-6' ) ) }}">
+					<div class="xl:col-span-3 h4">{{ item.title }}</div>
+					<div class="mt-2 xl:mt-0 xl:col-span-9 xl:ml-12 text-medium">{{ item.content }}</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+{%- endif -%}

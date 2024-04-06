@@ -1,0 +1,42 @@
+
+{#
+ # Front Page
+ #
+ # @package WordPress
+ # @subpackage CeliaAubry
+ #}
+
+{% extends 'index.html.twig' %}
+
+{%- block content -%}
+
+	<main class="mt-20 mb-10 xl:mt-24 xl:mb-20">
+
+		<div class="bg-brand-beige py-10 xl:py-20">
+			<div class="container xl:grid xl:grid-cols-12 xl:items-center xl:gap-4">
+
+				<div class="xl:col-span-8">
+					<h1 class="h1 text-balance hyphens-auto">{{- post.meta( 'hero' ).title -}}</h1>
+					<p class="text-neutral-900 mt-2 xl:mt-10 text-[2rem] leading-[1.3125]">
+						{{- post.meta( 'hero' ).content -}}
+					</p>
+				</div>
+
+				<div class="xl:col-span-4 text-medium mt-6 xl:mt-0">
+					<p class="h3">{{- post.meta( 'hero' ).date -}}</p>
+					<ul class="space-y-2 mt-2 xl:mt-4">
+						{% for cat in get_terms( { taxonomy: 'case_study_cat', hide_empty: false } ) %}
+							<li class="flex gap-2">
+								<img src="{{ asset( 'src/img/svg/' ~ cat.meta( 'icon' ) ~ '.svg' ) }}" alt="" width="20" height="20">
+								{{- cat.name -}}
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		{{- include( 'blocks/blocks.html.twig', { blocks: post.meta( 'blocks' ), classes: [] } ) -}}
+
+	</main>
+{%- endblock -%}

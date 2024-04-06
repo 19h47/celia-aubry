@@ -1,0 +1,30 @@
+{#
+ # Blocks: Case Study Categories
+ #}
+
+<div class="py-10 xl:py-20 space-y-6 xl:space-y-10">
+	{%- if block.title -%}
+		<div class="container">
+			<h2 class="h3">{{- block.title -}}</h2>
+		</div>
+	{%- endif -%}
+
+	<div class="container space-y-16 xl:space-y-6">
+		{% for category in block.categories %}
+			{% set term = get_term( category.category ) %}
+			{% set case_study = get_post( category.case_study ) %}
+
+			<div class="grid grid-cols-12 gap-y-16 gap-x-4">
+				<div class="col-span-12 xl:col-span-6 xl:mr-12">
+					<h3 class="h2">{{- term.name -}}</h3>
+					<p class="text-medium mt-3">{{- term.meta( 'excerpt' ) -}}</p>
+					<a href="{{ term.link }}" class="text-regular mt-6 link inline-flex">{{- __( 'Discover %s expertise', 'celia-aubry' ) | format( term.name ) -}}</a>
+				</div>
+
+				<c-scroll class="col-span-12 xl:col-span-5 xl:col-start-8 xl:mt-32">
+					{{- include( 'components/tease-case-study.html.twig', { post: case_study } ) -}}
+				</c-scroll>
+			</div>
+		{% endfor %}
+	</div>
+</div>

@@ -6,6 +6,162 @@
  # @author Jérémy Levron <jeremylevron@19h47.fr> (https://19h47.fr)
  #}
 
-<header>
-	HEADER
-</header>
+<c-header class="{{ html_classes( classes | default( [] ) | join( ' ' ), 'h-20 xl:h-24 fixed top-0 inset-x-0 bg-white z-2' ) }}">
+	<hr class="w-full h-px bg-neutral-50 absolute top-full inset-x-0 z-2 pointer-events-none">
+	<div class="container px-4 flex justify-between items-center h-full xl:h-auto">
+
+		{% block link %}
+			<a href="{{ site.link }}" aria-label="{{ site.title }}" class="h-10 w-[2.375rem] block">
+				{{- icon( 'logo', { classes: [ 'size-full' ] } ) -}}
+			</a>
+		{% endblock %}
+
+		<c-nav-button type="button" class="xl:hidden group cursor-pointer" aria-label="{{ __( 'Menu', 'celia-aubry' ) }}">
+			{{- icon( 'bars', { classes: [ 'size-[1.125rem] block group-[.is-active]:hidden' ] } ) -}}
+			{{- icon( 'x-mark', { classes: [ 'size-[1.125rem] hidden group-[.is-active]:block' ] } ) -}}
+		</c-nav-button>
+
+		<ul
+			class="hidden xl:flex gap-6 -mr-6"
+			itemscope
+			itemtype="http://schema.org/SiteNavigationElement"
+		>
+			{% for item in nav_menus.main.get_items() %}
+				<li class="{{ html_classes( item.children ? 'group' : '' ) }}">
+					{% if '#' == item.url and item.children %}
+						<button
+							type="button"
+							class="{{ html_classes(
+								'px-6 py-9 flex gap-1 items-center relative after:bottom-0 after:mx-6 after:inset-x-0 after:bg-neutral-900 after:absolute after:h-px after:opacity-0 after:transition-opacity after:duration-300 after:ease-in-out hover:after:opacity-100',
+								item.current or item.current_item_parent ? 'after:opacity-100' : '',
+								item.classes | join( ' ' ),
+							) }}"
+						>
+							{{- item.title -}}
+							{{ icon( 'arrow-down', { classes: [ 'size-2.5' ] } ) }}
+						</button>
+
+						{%- if item.children -%}
+							<ul class="absolute hidden group-hover:flex gap-6 top-full justify-center inset-x-0 bg-white border-b border-neutral-50">
+								{%- for child in item.children -%}
+									<li>
+										<a
+											href="{{ child.url }}"
+											class="{{ html_classes(
+												'px-6 py-[2.375rem] relative after:bottom-0 after:mx-6 after:inset-x-0 after:bg-neutral-900 after:absolute after:h-px after:opacity-0 after:transition-opacity after:duration-300 after:ease-in-out hover:after:opacity-100',
+												child.master_object.meta( 'icon' ) ? 'flex gap-2' : 'block',
+												child.current ? 'after:opacity-100' : '',
+												child.classes | join( ' ' ),
+											) }}"
+											itemprop="url"
+											{{ child.is_target_blank or child.is_external ? " target=\"#{item.target}\" rel=\"noopener noreferer\"" }}
+										>
+											{%- if child.master_object.meta( 'icon' ) -%}
+												<img src="{{ asset( 'src/img/svg/' ~ child.master_object.meta( 'icon' ) ~ '.svg' ) }}" alt="" width="20" height="20">
+											{%- endif -%}
+											{{- child.title -}}
+										</a>
+									</li>
+								{%- endfor -%}
+							</ul>
+						{%- endif -%}
+					{% else %}
+						<a
+							href="{{ item.url }}"
+							class="{{ html_classes(
+								'px-6 py-9 block relative after:bottom-0 after:mx-6 after:inset-x-0 after:bg-neutral-900 after:absolute after:h-px after:opacity-0 after:transition-opacity after:duration-300 after:ease-in-out hover:after:opacity-100',
+								item.current ? 'after:opacity-100' : '',
+								item.classes | join( ' ' ),
+							) }}"
+							itemprop="url"
+							{{ item.is_target_blank or item.is_external ? " target=\"#{item.target}\" rel=\"noopener noreferer\"" }}
+						>
+							{{- item.title -}}
+						</a>
+					{% endif %}
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+</c-header>
+
+<c-nav class="fixed text-medium bg-white inset-0 size-full z-1 flex pt-20 flex-col text-center" style="opacity: 0; visibility: hidden;">
+	<div class="container flex flex-grow list-none overflow-auto">
+
+		<c-accordion
+			class="space-y-12 m-auto py-10"
+			itemscope
+			itemtype="http://schema.org/SiteNavigationElement"
+		>
+			{% for item in nav_menus.main.get_items() %}
+				{% if '#' == item.url and item.children %}
+					<li class="{{ html_classes( 'js-accordion-panel' ) }}" data-accordion-open="false" data-accordion-deselect="true">
+						<button
+							type="button"
+							class="{{ html_classes(
+								'js-accordion-header',
+								'flex gap-1 items-center mx-auto',
+								item.current or item.current_item_parent ? '' : '',
+								item.classes | join( ' ' ),
+							) }}"
+							aria-expanded="false"
+							aria-controls="{{ item.slug }}"
+						>
+							{{- item.title -}}
+							{{ icon( 'arrow-down', { classes: [ 'size-2.5' ] } ) }}
+						</button>
+
+						{%- if item.children -%}
+							<div id="{{ item.slug }}" role="region">
+								<ul class="space-y-6 pt-6 js-accordion-inner">
+									{%- for child in item.children -%}
+										<li>
+											<a
+												href="{{ child.url }}"
+												class="{{ html_classes(
+													'',
+													child.master_object.meta( 'icon' ) ? 'inline-flex gap-2' : 'block',
+													child.current ? '' : '',
+													child.classes | join( ' ' ),
+												) }}"
+												itemprop="url"
+												{{ child.is_target_blank or child.is_external ? " target=\"#{item.target}\" rel=\"noopener noreferer\"" }}
+											>
+												{%- if child.master_object.meta( 'icon' ) -%}
+													<img src="{{ asset( 'src/img/svg/' ~ child.master_object.meta( 'icon' ) ~ '.svg' ) }}" alt="" width="20" height="20">
+												{%- endif -%}
+												{{- child.title -}}
+											</a>
+										</li>
+									{%- endfor -%}
+								</ul>
+						{%- endif -%}
+					</li>
+				{% else %}
+					<li class="{{ html_classes() }}">
+						<a
+							href="{{ item.url }}"
+							class="{{ html_classes(
+								'',
+								item.current ? '' : '',
+								item.classes | join( ' ' ),
+							) }}"
+							itemprop="url"
+							{{ item.is_target_blank or item.is_external ? " target=\"#{item.target}\" rel=\"noopener noreferer\"" }}
+						>
+							{{- item.title -}}
+						</a>
+					</li>
+				{% endif %}
+			{% endfor %}
+		</c-accordion>
+
+	</div>
+
+	<footer class="bg-brand-jaune flex-shrink">
+		<div class="container my-10">
+			{{ authordescription | nl2br }}
+			<br><a class="font-bold" href="{{ public_email }}">{{- public_email -}}</a>
+		</div>
+	</footer>
+</c-nav>

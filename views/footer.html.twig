@@ -7,6 +7,62 @@
  # @author Jérémy Levron <jeremylevron@19h47.fr> (https://19h47.fr)
  #}
 
-<footer>
-	FOOTER
+{% block contact %}
+	<div class="px-4 xl:px-14 mt-10 xl:mt-20 mb-16">
+		<div class="bg-neutral-900 rounded-[1.25rem] py-20 text-white text-center space-y-6">
+			<h2 class="h2 text-balance">{{- __( 'We work together?', 'celia-aubry' ) -}}</h2>
+			<a href="{{ contact_url }}" class="button">{{- __( 'Contact me', 'celia-aubry' ) -}}</a>
+		</div>
+	</div>
+{% endblock %}
+
+<footer class="mt-16 pb-10">
+	<div class="container">
+		<ul
+			class="text-large flex flex-col xl:flex-row gap-10 mb-10 text-neutral-900 xl:text-neutral-400 xl:justify-center"
+			itemscope
+			itemtype="http://schema.org/SiteNavigationElement"
+		>
+			{% for item in nav_menus.footer.get_items() %}
+				<li class="{{ html_classes() }}">
+					<a
+						href="{{ item.url }}"
+						class="{{ html_classes(
+							'inline-flex gap-4 items-center w-min xl:w-auto xl:transition-colors xl:ease-in-out xl:duration-300 xl:hover:text-neutral-900',
+							item.current ? '' : '',
+							item.classes | join( ' ' ),
+						) }}"
+						itemprop="url"
+						{{ item.is_target_blank or item.is_external ? " target=\"#{item.target}\" rel=\"noopener noreferer\"" }}
+					>
+						{{- item.title -}}
+						{{- icon( 'arrow-up-right', { classes: [ 'shrink-0 size-6' ] } ) -}}
+					</a>
+				</li>
+			{% endfor %}
+		</ul>
+		<hr class="bg-neutral-200 my-10">
+		<ul
+			class="text-regular flex gap-10 mt-10 text-neutral-900 xl:text-neutral-400 xl:justify-center"
+			itemscope
+			itemtype="http://schema.org/SiteNavigationElement"
+		>
+			{% for item in nav_menus.legals.get_items() %}
+				<li class="{{ html_classes() }}">
+					<a
+						href="{{ item.url }}"
+						class="{{ html_classes(
+							'link',
+							item.current ? '' : '',
+							item.classes | join( ' ' ),
+						) }}"
+						itemprop="url"
+						{{ item.is_target_blank or item.is_external ? " target=\"#{item.target}\" rel=\"noopener noreferer\"" }}
+					>
+						{{- item.title -}}
+					</a>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
 </footer>

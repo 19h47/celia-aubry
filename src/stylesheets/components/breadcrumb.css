@@ -1,0 +1,9 @@
+@layer components {
+	.breadcrumb {
+		@apply text-small
+
+	}
+	.breadcrumb a {
+		text-decoration: underline;
+	}
+}

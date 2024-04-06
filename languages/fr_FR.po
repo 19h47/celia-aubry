@@ -1,0 +1,851 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Célia Aubry\n"
+"POT-Creation-Date: 2024-04-05 12:02+0200\n"
+"PO-Revision-Date: 2024-04-05 12:10+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 3.4.2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+"X-Poedit-SearchPathExcluded-1: node_modules\n"
+"X-Poedit-SearchPathExcluded-2: vendor\n"
+
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:67
+msgid "Blocks"
+msgstr "Blocs"
+
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:74
+msgid "Gallery"
+msgstr "Galerie"
+
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:79
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:83
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:125
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:128
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:196
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:199
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:282
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:285
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:310
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:313
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:334
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:337
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:349
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:353
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:379
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:382
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:394
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:397
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:437
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:440
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:469
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:472
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:519
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:522
+msgid "Title"
+msgstr "Titre"
+
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:80
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:129
+msgid "Indicate the title of the block. (Optional)"
+msgstr "Indiquez le titre du bloc. (Optionnel)"
+
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:87
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:133
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:180
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:203
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:358
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:363
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:410
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:414
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:444
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:544
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:548
+msgid "Content"
+msgstr "Contenu"
+
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:88
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:139
+msgid "Indicate the content of the block. (Optional)"
+msgstr "Indiquez le contenu du bloc. (Optionnel)"
+
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:97
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:211
+msgid "Images"
+msgstr "Images"
+
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:104
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:151
+msgid "Background Color"
+msgstr "Couleur de fond"
+
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:108
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:155
+msgid "Dark"
+msgstr "Sombre"
+
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:109
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:156
+msgid "Beige"
+msgstr "Beige"
+
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:110
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:157
+msgid "Light"
+msgstr "Clair"
+
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:120
+msgid "Title, Content & link"
+msgstr "Titre, contenu et lien"
+
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:143
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:422
+#: includes/Plugins/ACF/IncludeFields/CaseStudyFields.php:60
+msgid "Link"
+msgstr "Lien"
+
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:147
+msgid "Indicate the link of the block. (Optional)"
+msgstr "Indiquez le lien du bloc. (Optionnel)"
+
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:167
+msgid "Image & Content"
+msgstr "Image et contenu"
+
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:172
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:222
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:227
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:453
+msgid "Image"
+msgstr "Image"
+
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:191
+msgid "Title, Content & Images"
+msgstr "Titre, contenu et images"
+
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:236
+msgid "Aspect Ratio"
+msgstr "Ratio d'aspect"
+
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:239
+msgid "Aspect ratio of the image. (Default auto)"
+msgstr "Ratio d’aspect de l’image. (Optionnel)"
+
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:241
+msgid "Auto"
+msgstr "Automatique"
+
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:242
+msgid "1 / 1"
+msgstr "1 / 1"
+
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:243
+msgid "2 / 1"
+msgstr "2 / 1"
+
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:244
+msgid "16 / 9"
+msgstr "16 / 9"
+
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:254
+msgid "Margins"
+msgstr "Marges"
+
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:260
+msgid "Does the block have margins?"
+msgstr "Le bloc a-t-il des marges ?"
+
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:264
+msgid "Full Width"
+msgstr "Pleine largeur"
+
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:270
+msgid "Is the image full width?"
+msgstr "L’image est-elle pleine largeur ?"
+
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:277
+msgid "Case Studies Grid"
+msgstr "Grille des projets"
+
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:289
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:476
+msgid "Categories"
+msgstr "Catégories"
+
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:305
+msgid "Case Studies List"
+msgstr "Liste des projets"
+
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:317
+#: views/pages/archive-case-study.html.twig:16
+#: views/pages/archive-case-study.html.twig:43
+msgid "Case Studies"
+msgstr "Projets"
+
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:329
+msgid "Timeline"
+msgstr "Chronologie"
+
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:341
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:386
+msgid "Items"
+msgstr "Items"
+
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:345
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:390
+msgid "Add Item"
+msgstr "Ajouter un item"
+
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:374
+msgid "Testimonials"
+msgstr "Témoignages"
+
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:402
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:405
+msgid "Position"
+msgstr "Poste"
+
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:432
+msgid "Read More"
+msgstr "En savoir plus"
+
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:464
+msgid "Case Study Categories"
+msgstr "Catégories de projet"
+
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:480
+msgid "Add Category"
+msgstr "Ajouter une catégorie"
+
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:484
+msgid "Category"
+msgstr "Catégorie"
+
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:498
+#: includes/Post/CaseStudy.php:163
+msgid "Case Study"
+msgstr "Projet"
+
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:514
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:526
+msgid "Key Figures"
+msgstr "Chiffres clés"
+
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:532
+msgid "Add Key Figure"
+msgstr "Ajouter un chiffre clés"
+
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:536
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:539
+msgid "Key Figure"
+msgstr "Chiffre clé"
+
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:557
+msgid "Add Block"
+msgstr "Ajouter un bloc"
+
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:564
+msgid "Blocks Fields"
+msgstr "Champs de blocs"
+
+#: includes/Plugins/ACF/IncludeFields/CaseStudyCatFields.php:46
+#: includes/Plugins/ACF/IncludeFields/CaseStudyCatFields.php:50
+msgid "Excerpt"
+msgstr "Extrait"
+
+#: includes/Plugins/ACF/IncludeFields/CaseStudyCatFields.php:55
+msgid "Icon"
+msgstr "Icône"
+
+#: includes/Plugins/ACF/IncludeFields/CaseStudyCatFields.php:59
+msgid "Branding"
+msgstr "Branding"
+
+#: includes/Plugins/ACF/IncludeFields/CaseStudyCatFields.php:60
+msgid "DA . UX/UI"
+msgstr "DA . UX/UI"
+
+#: includes/Plugins/ACF/IncludeFields/CaseStudyCatFields.php:61
+msgid "Illustration"
+msgstr "Illustration"
+
+#: includes/Plugins/ACF/IncludeFields/CaseStudyCatFields.php:62
+msgid "Product design"
+msgstr "Product design"
+
+#: includes/Plugins/ACF/IncludeFields/CaseStudyCatFields.php:72
+msgid "Case Study Cat Fields"
+msgstr "Champs d’une catégorie de projet"
+
+#: includes/Plugins/ACF/IncludeFields/CaseStudyFields.php:46
+#: includes/Plugins/ACF/IncludeFields/CaseStudyFields.php:49
+msgid "Description"
+msgstr "Description"
+
+#: includes/Plugins/ACF/IncludeFields/CaseStudyFields.php:53
+#: includes/Plugins/ACF/IncludeFields/CaseStudyFields.php:56
+msgid "Date"
+msgstr "Date"
+
+#: includes/Plugins/ACF/IncludeFields/CaseStudyFields.php:63
+msgid "Indicate the link of the case study. (Optional)"
+msgstr "Indiquez le lien du projet. (Optionnel)"
+
+#: includes/Plugins/ACF/IncludeFields/CaseStudyFields.php:71
+msgid "Case Study Fields"
+msgstr "Champs du projet"
+
+#. translators: Publish box date format, see https://secure.php.net/date
+#: includes/Post/CaseStudy.php:45
+msgid "M j, Y @ H:i"
+msgstr "F j, Y @ H:i"
+
+#: includes/Post/CaseStudy.php:50 includes/Post/CaseStudy.php:134
+msgid "View Case Study"
+msgstr "Voir le projet"
+
+#: includes/Post/CaseStudy.php:56 includes/Post/CaseStudy.php:62
+msgid "Preview Case Study"
+msgstr "Aperçu du projet"
+
+#: includes/Post/CaseStudy.php:67 includes/Post/CaseStudy.php:70
+msgid "Case Study updated."
+msgstr "Le projet a été mis à jour."
+
+#: includes/Post/CaseStudy.php:68
+msgid "Custom field updated."
+msgstr "Champ personnalisé mis à jour."
+
+#: includes/Post/CaseStudy.php:69
+msgid "Custom field deleted."
+msgstr "Champ personnalisé supprimé."
+
+#. translators: %s: date and time of the revision
+#: includes/Post/CaseStudy.php:72
+#, php-format
+msgid "Case Study restored to revision from %s."
+msgstr "Projet rétabli à partir de la révision du %s."
+
+#: includes/Post/CaseStudy.php:73
+msgid "Case Study published."
+msgstr "Projet publié."
+
+#: includes/Post/CaseStudy.php:74
+msgid "Case Study saved."
+msgstr "Projet enregistré."
+
+#: includes/Post/CaseStudy.php:75
+msgid "Case Study submitted."
+msgstr "Projet transmis."
+
+#: includes/Post/CaseStudy.php:76
+#, php-format
+msgid "Case Study scheduled for: %s."
+msgstr "Projet planifié pour le : %s."
+
+#: includes/Post/CaseStudy.php:77
+msgid "Case Study draft updated."
+msgstr "Le projet a été mis à jour."
+
+#. translators: %s: Number of case studies.
+#: includes/Post/CaseStudy.php:103
+#, php-format
+msgid "%s case study updated."
+msgid_plural "%s case studies updated."
+msgstr[0] "1 projet mis à jour."
+msgstr[1] "%s projets mis à jour."
+
+#: includes/Post/CaseStudy.php:104
+msgid "1 case study not updated, somebody is editing it."
+msgstr "Un projet non mis à jour, quelqu’un l’édite."
+
+#. translators: %s: Number of case studies.
+#: includes/Post/CaseStudy.php:106
+#, php-format
+msgid "%s case study not updated, somebody is editing it."
+msgid_plural "%s case studies not updated, somebody is editing them."
+msgstr[0] "Un projet non mis à jour, quelqu’un l’édite."
+msgstr[1] "%s projets non mis à jour, quelqu’un les édite."
+
+#. translators: %s: Number of case studies.
+#: includes/Post/CaseStudy.php:108
+#, php-format
+msgid "%s case study permanently deleted."
+msgid_plural "%s case study permanently deleted."
+msgstr[0] "Un projet définitivement supprimé."
+msgstr[1] "%s projets définitivement supprimés."
+
+#. translators: %s: Number of case studies..
+#: includes/Post/CaseStudy.php:110
+#, php-format
+msgid "%s case study moved to the Trash."
+msgid_plural "%s case study moved to the Trash."
+msgstr[0] "Un projet déplacé dans la corbeille."
+msgstr[1] "%s projets déplacés dans la corbeille."
+
+#. translators: %s: Number of case studies.
+#: includes/Post/CaseStudy.php:112
+#, php-format
+msgid "%s case study restored from the Trash."
+msgid_plural "%s case study restored from the Trash."
+msgstr[0] "Un projet restauré depuis la corbeille."
+msgstr[1] "%s projets restaurés depuis la corbeille."
+
+#: includes/Post/CaseStudy.php:127
+msgctxt "case study type generale name"
+msgid "Case Studies"
+msgstr "Projets"
+
+#: includes/Post/CaseStudy.php:128
+msgctxt "case study type singular name"
+msgid "Case Study"
+msgstr "Projet"
+
+#: includes/Post/CaseStudy.php:129
+msgctxt "case study type"
+msgid "Add New"
+msgstr "Ajouter"
+
+#: includes/Post/CaseStudy.php:130
+msgid "Add New Case Study"
+msgstr "Ajouter un nouveau projet"
+
+#: includes/Post/CaseStudy.php:131
+msgid "Edit Case Study"
+msgstr "Éditer le projet"
+
+#: includes/Post/CaseStudy.php:132
+msgid "New Case Study"
+msgstr "Ajouter un projet"
+
+#: includes/Post/CaseStudy.php:133
+msgid "View Case Studies"
+msgstr "Voir les projets"
+
+#: includes/Post/CaseStudy.php:135
+msgid "Search Case Studies"
+msgstr "Rechercher des projets"
+
+#: includes/Post/CaseStudy.php:136
+msgid "No case studies found."
+msgstr "Aucun projet trouvé."
+
+#: includes/Post/CaseStudy.php:137
+msgid "No case studies found in Trash."
+msgstr "Aucun projet trouvée dans la corbeille."
+
+#: includes/Post/CaseStudy.php:138
+msgid "Parent Case Study:"
+msgstr "Projet parent :"
+
+#: includes/Post/CaseStudy.php:139
+msgid "All Case Studies"
+msgstr "Tous les projets"
+
+#: includes/Post/CaseStudy.php:140
+msgid "Case Study Archives"
+msgstr "Archive des projets"
+
+#: includes/Post/CaseStudy.php:141
+msgid "Case Study Attributes"
+msgstr "Attributs des projets"
+
+#: includes/Post/CaseStudy.php:142
+msgid "Insert into case study"
+msgstr "Insérer dans le projet"
+
+#: includes/Post/CaseStudy.php:143
+msgid "Uploaded to this case study"
+msgstr "Télécharger sur ce projet"
+
+#: includes/Post/CaseStudy.php:144
+msgctxt "case study"
+msgid "Featured Image"
+msgstr "Image mise en avant"
+
+#: includes/Post/CaseStudy.php:145
+msgctxt "case study"
+msgid "Set featured image"
+msgstr "Définir comme image mise en avant"
+
+#: includes/Post/CaseStudy.php:146
+msgctxt "case study"
+msgid "Remove featured image"
+msgstr "Supprimer l’image mise en avant"
+
+#: includes/Post/CaseStudy.php:147
+msgctxt "case study"
+msgid "Use as featured image"
+msgstr "Utiliser comme image mise en avant"
+
+#: includes/Post/CaseStudy.php:148
+msgid "Case studies list navigation"
+msgstr "Navigation dans la liste des projets"
+
+#: includes/Post/CaseStudy.php:149
+msgid "Case studies list"
+msgstr "Liste des projets"
+
+#: includes/Post/CaseStudy.php:150
+msgid "Case study published."
+msgstr "Projet publié."
+
+#: includes/Post/CaseStudy.php:151
+msgid "Case study published privately."
+msgstr "Projet mis en ligne en privé."
+
+#: includes/Post/CaseStudy.php:152
+msgid "Case study reverted to draft."
+msgstr "Projet reconverti en brouillon."
+
+#: includes/Post/CaseStudy.php:153
+msgid "Case study scheduled."
+msgstr "Projet planifié."
+
+#: includes/Post/CaseStudy.php:154
+msgid "Case study updated."
+msgstr "Le projet a été mis à jour."
+
+#: includes/Setup/Context.php:58
+msgid "Facebook"
+msgstr "Facebook"
+
+#: includes/Setup/Context.php:60
+msgid "Share on Facebook"
+msgstr "Partager sur Facebook"
+
+#: includes/Setup/Context.php:66 includes/Setup/Settings.php:63
+msgid "Instagram"
+msgstr "Instagram"
+
+#: includes/Setup/Context.php:71
+msgid "YouTube"
+msgstr "YouTube"
+
+#: includes/Setup/Context.php:77
+msgid "Twitter"
+msgstr "Partager sur Twitter"
+
+#: includes/Setup/Context.php:79
+msgid "Share on Twitter"
+msgstr "Partager sur Twitter"
+
+#: includes/Setup/Context.php:85 includes/Setup/Settings.php:49
+msgid "LinkedIn"
+msgstr "LinkedIn"
+
+#: includes/Setup/Context.php:87
+msgid "Share on LinkedIn"
+msgstr "Partagez sur LinkedIn"
+
+#: includes/Setup/Enqueue.php:108
+msgctxt "messages"
+msgid "Please fill out this field."
+msgstr "Veuillez remplir ce champ."
+
+#: includes/Setup/Enqueue.php:111
+msgctxt "messages"
+msgid "Please enter an email address."
+msgstr "Veuillez entrer une adresse email."
+
+#: includes/Setup/Enqueue.php:112
+msgctxt "messages"
+msgid "Please enter a URL."
+msgstr "Veuillez entrer une URL."
+
+#: includes/Setup/Enqueue.php:113
+msgctxt "messages"
+msgid "Please match the expected format."
+msgstr "Veuillez correspondre au format attendu."
+
+#: includes/Setup/NavMenu.php:35
+msgid "Main Menu"
+msgstr "Menu principal"
+
+#: includes/Setup/NavMenu.php:36
+msgid "Footer Menu"
+msgstr "Menu du pied de page"
+
+#: includes/Setup/NavMenu.php:37
+msgid "Legals Menu"
+msgstr "Menu des mentions légales"
+
+#: includes/Setup/Settings.php:57
+msgid "Enter the LinkedIn URL here."
+msgstr "Indiquer l’URL du compte LinkedIn."
+
+#: includes/Setup/Settings.php:71
+msgid "Enter the Instagram URL here."
+msgstr "Indiquer l’URL du compte Instagram."
+
+#: includes/Setup/Settings.php:77 includes/Template/PostStates.php:41
+msgid "Contact Page"
+msgstr "Page de contact"
+
+#: includes/Taxonomy/CaseStudyCat.php:39
+msgctxt "case study cat general name"
+msgid "Categories"
+msgstr "Catégories"
+
+#: includes/Taxonomy/CaseStudyCat.php:40
+msgctxt "case study cat singular name"
+msgid "Category"
+msgstr "Catégorie"
+
+#: includes/Taxonomy/CaseStudyCat.php:41
+msgid "Search Categories"
+msgstr "Rechercher des catégories"
+
+#: includes/Taxonomy/CaseStudyCat.php:42
+msgid "All Categories"
+msgstr "Toutes les catégories"
+
+#: includes/Taxonomy/CaseStudyCat.php:43
+msgid "Popular Categories"
+msgstr "Catégories populaires"
+
+#: includes/Taxonomy/CaseStudyCat.php:44
+msgid "Edit Category"
+msgstr "Modifier la catégorie"
+
+#: includes/Taxonomy/CaseStudyCat.php:45
+msgid "View Category"
+msgstr "Voir la catégorie"
+
+#: includes/Taxonomy/CaseStudyCat.php:46
+msgid "Update Category"
+msgstr "Mettre à jour la catégorie"
+
+#: includes/Taxonomy/CaseStudyCat.php:47
+msgid "Add New Category"
+msgstr "Ajouter une nouvelle catégorie"
+
+#: includes/Taxonomy/CaseStudyCat.php:48
+msgid "New Category Name"
+msgstr "Nom de la nouvelle catégorie"
+
+#: includes/Taxonomy/CaseStudyCat.php:49
+msgid "Separate categories with commas"
+msgstr "Séparez les catégories par des virgules"
+
+#: includes/Taxonomy/CaseStudyCat.php:50
+msgid "Add or remove categories"
+msgstr "Ajouter ou retirer des catégories"
+
+#: includes/Taxonomy/CaseStudyCat.php:51
+msgid "Choose from the most used categories"
+msgstr "Choisissez parmi les catégories les plus utilisées"
+
+#: includes/Taxonomy/CaseStudyCat.php:52
+msgid "No categories found."
+msgstr "Aucune catégorie trouvée."
+
+#: includes/Taxonomy/CaseStudyCat.php:53
+msgid "No categories"
+msgstr "Aucune catégorie"
+
+#: includes/Taxonomy/CaseStudyCat.php:54
+msgid "Categories list navigation"
+msgstr "Navigation de la liste des catégories"
+
+#: includes/Taxonomy/CaseStudyCat.php:55
+msgid "Categories list"
+msgstr "Liste des catégories"
+
+#. translators: Case Study cat heading when selecting from the most used terms.
+#: includes/Taxonomy/CaseStudyCat.php:57
+msgctxt "case study cat"
+msgid "Most Used"
+msgstr "Plus utilisées"
+
+#: includes/Taxonomy/CaseStudyCat.php:58
+msgid "&larr; Back to Categories"
+msgstr "&larr; Revenir aux catégories"
+
+#: includes/Taxonomy/CaseStudyTag.php:39
+msgctxt "case study tag general name"
+msgid "Tags"
+msgstr "Étiquettes"
+
+#: includes/Taxonomy/CaseStudyTag.php:40
+msgctxt "case study tag singular name"
+msgid "Tag"
+msgstr "Étiquette"
+
+#: includes/Taxonomy/CaseStudyTag.php:41
+msgid "Search Tags"
+msgstr "Rechercher des étiquettes"
+
+#: includes/Taxonomy/CaseStudyTag.php:42
+msgid "All Tags"
+msgstr "Toutes les étiquettes"
+
+#: includes/Taxonomy/CaseStudyTag.php:43
+msgid "Popular Tags"
+msgstr "Étiquettes populaires"
+
+#: includes/Taxonomy/CaseStudyTag.php:44
+msgid "Edit Tag"
+msgstr "Modifier l’étiquette"
+
+#: includes/Taxonomy/CaseStudyTag.php:45
+msgid "View Tag"
+msgstr "Voir l’étiquette"
+
+#: includes/Taxonomy/CaseStudyTag.php:46
+msgid "Update Tag"
+msgstr "Mettre à jour l’étiquette"
+
+#: includes/Taxonomy/CaseStudyTag.php:47
+msgid "Add New Tag"
+msgstr "Ajouter une nouvelle étiquette"
+
+#: includes/Taxonomy/CaseStudyTag.php:48
+msgid "New Tag Name"
+msgstr "Nom de la nouvelle étiquette"
+
+#: includes/Taxonomy/CaseStudyTag.php:49
+msgid "Separate tags with commas"
+msgstr "Séparez les étiquettes par des virgules"
+
+#: includes/Taxonomy/CaseStudyTag.php:50
+msgid "Add or remove tags"
+msgstr "Ajouter ou retirer des étiquettes"
+
+#: includes/Taxonomy/CaseStudyTag.php:51
+msgid "Choose from the most used tags"
+msgstr "Choisissez parmi les étiquettes les plus utilisées"
+
+#: includes/Taxonomy/CaseStudyTag.php:52
+msgid "No tags found."
+msgstr "Aucune étiquette trouvée."
+
+#: includes/Taxonomy/CaseStudyTag.php:53
+msgid "No tags"
+msgstr "Aucune étiquette"
+
+#: includes/Taxonomy/CaseStudyTag.php:54
+msgid "Tags list navigation"
+msgstr "Navigation de la liste des étiquettes"
+
+#: includes/Taxonomy/CaseStudyTag.php:55
+msgid "Tags list"
+msgstr "Liste des étiquettes"
+
+#. translators: Case Study tag heading when selecting from the most used terms.
+#: includes/Taxonomy/CaseStudyTag.php:57
+msgctxt "case study tag"
+msgid "Most Used"
+msgstr "Plus utilisées"
+
+#: includes/Taxonomy/CaseStudyTag.php:58
+msgid "&larr; Back to Tags"
+msgstr "&larr; Retour aux étiquettes"
+
+#: includes/Template/PostStates.php:37
+msgid "About Page"
+msgstr "Page À propos"
+
+#: includes/Vite.php:82
+msgid "No Vite Manifest exists. Should hot server be running?"
+msgstr ""
+"Le manifeste de Vite n’existe pas. Est-ce que le serveur est en court "
+"d’exécution ?"
+
+#: includes/Vite.php:123
+msgid "Unknown Vite build asset: "
+msgstr "Ressource Vite inconnue : "
+
+#: views/blocks/case-studies-grid.html.twig:35
+msgid "No case studies to display"
+msgstr "Aucun projet à afficher"
+
+#: views/blocks/case-studies-list.html.twig:25
+msgid "See all case studies"
+msgstr "Voir tous les projets"
+
+#: views/blocks/case-study-categories.html.twig:20
+#, php-format
+msgid "Discover %s expertise"
+msgstr "Découvrir l’expertise %s"
+
+#: views/components/collection-case-study.html.twig:32
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr ""
+"On dirait que rien n'a été trouvé à cet endroit. Essayez peut-être une "
+"recherche ?"
+
+#: views/footer.html.twig:13
+msgid "We work together?"
+msgstr "On travaille ensemble ?"
+
+#: views/footer.html.twig:14
+msgid "Contact me"
+msgstr "Contactez-moi"
+
+#: views/header.html.twig:19
+msgid "Menu"
+msgstr "Menu"
+
+#: views/pages/archive-case-study.html.twig:23
+msgid "Filter by expertise"
+msgstr "Filtrer par expertise"
+
+#: views/pages/archive-case-study.html.twig:28
+msgid "All case studies"
+msgstr "Tous les projets"
+
+#: views/pages/archive-case-study.html.twig:47
+msgid "Expertise"
+msgstr "Expertise"
+
+#: views/pages/single-case-study.html.twig:41
+msgid "See the website"
+msgstr "Voir le site"
+
+#: views/pages/taxonomy-case-study-cat.html.twig:29
+msgid "Discover other expertise"
+msgstr "Découvrez d’autres expertises"
+
+#. Theme Name of the plugin/theme
+msgid "Célia Aubry"
+msgstr "Célia Aubry"
+
+#. Theme URI of the plugin/theme
+msgid "https://github.com/19h47/celia-aubry/"
+msgstr "https://github.com/19h47/celia-aubry/"
+
+#. Description of the plugin/theme
+msgid "WordPress Theme for Célia Aubry"
+msgstr "Thème WordPress pour Célia Aubry"
+
+#. Author of the plugin/theme
+msgid "Jérémy Levron"
+msgstr "Jérémy Levron"
+
+#. Author URI of the plugin/theme
+msgid "https://19h47.fr/"
+msgstr "https://19h47.fr/"
+
+#~ msgid "Spotlight"
+#~ msgstr "Spotlight"
+
+#, php-format
+#~ msgid "My %s case studies"
+#~ msgstr "Mes projets en %s"
+
+#~ msgid "Thumbnail"
+#~ msgstr "Image mise en avant"

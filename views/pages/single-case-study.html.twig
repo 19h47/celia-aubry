@@ -1,0 +1,52 @@
+{#
+ # Single: Case Study
+ #
+ # @package WordPress
+ # @subpackage TrueStory
+ #}
+
+{% extends 'index.html.twig' %}
+
+{% block content %}
+	{% set cats = post.terms({ taxonomy: 'case_study_cat' }) %}
+	{% set description = post.meta( 'description' ) %}
+	{% set date = post.meta( 'date' ) %}
+
+	<main class="mt-20 mb-10 xl:mt-24 xl:mb-20">
+		<div class="bg-brand-beige py-10 xl:py-20">
+			<div class="container">
+				{{- yoast_breadcrumb() -}}
+				<h1 class="h1 mt-6 xl:mt-8 text-balance hyphens-auto">{{- post.title -}}</h1>
+
+				{%- if cat or date or cats -%}
+					<div class="text-neutral-900 mt-2 xl:mt-6 text-medium">
+						{{- description -}}
+						{{- description and date ? '&nbsp;&sol;&nbsp;' : '' -}}
+						{{- date -}}
+						{%- if cats -%}
+							{{- description or date ? '&nbsp;&sol;&nbsp;' : '' -}}
+							{%- for cat in cats -%}
+								<span class="inline-flex gap-2 items-center">
+									<img src="{{ asset( 'src/img/svg/' ~ cat.meta( 'icon' ) ~ '.svg' ) }}" alt="" width="20" height="20">
+									{{- cat.name -}}
+								</span>
+								{{- loop.last ? '' : '&nbsp;&sol;&nbsp;' -}}
+							{%- endfor -%}
+						{%- endif -%}
+					</div>
+				{%- endif -%}
+
+				{% if post.meta( 'link' ).url %}
+					<a class="button mt-10" href="{{ post.meta( 'link' ).url }}" {{ post.meta( 'link' ).target ? 'rel="noopener noreferer" target="_blank"' }}>
+						{{ post.meta( 'link' ).title | default( __( 'See the website', 'celia-aubry' ) ) }}
+					</a>
+				{% endif %}
+			</div>
+		</div>
+
+		{{- include( 'blocks/blocks.html.twig', { blocks: post.meta( 'blocks' ), classes: [] } ) -}}
+
+		{{- include( 'components/navigation.html.twig', { classes: [ 'mt-20' ], next: post.next(), previous: post.prev() } ) -}}
+
+	</main>
+{% endblock %}

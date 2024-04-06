@@ -1,0 +1,110 @@
+@layer utilities {
+	.h1,
+	.h2,
+	.display-1,
+	.display-2 {
+		@apply font-serif;
+	}
+
+	.h1 {
+		font-size: 5rem; /* 80px */
+		letter-spacing: 0.02em;
+		line-height: 1;
+
+		@screen xl {
+			font-size: 6.25rem; /* 100px */
+		}
+	}
+
+	.h2 {
+		font-size: 3rem; /* 48px */
+		line-height: calc(51.79 / 48);
+
+		@screen xl {
+			font-size: 4rem; /* 64px */
+		}
+	}
+
+	.h3 {
+		font-size: 1rem; /* 16px */
+		letter-spacing: 0.1em;
+		line-height: 1.875;
+		text-transform: uppercase;
+	}
+
+	.h4 {
+		font-size: 1.625rem; /* 26px */
+		line-height: calc(31.17 / 26);
+
+		@screen xl {
+			font-size: 1.875rem; /* 30px */
+		}
+	}
+
+	.h4-bold {
+		@apply font-bold;
+
+		font-size: 1.875rem; /* 30px */
+		line-height: calc(35.97 / 30);
+	}
+
+	.text-small {
+		font-size: 0.8125rem; /* 13px */
+		line-height: calc(17 / 13);
+
+		@screen xl {
+			font-size: 0.875rem; /* 14px */
+			line-height: calc(17 / 14);
+		}
+	}
+
+	.text-regular {
+		font-size: 1rem;
+		line-height: calc(22 / 16);
+
+		@screen xl {
+			font-size: 1.125rem;
+			line-height: calc(22 / 18);
+		}
+	}
+
+	.text-medium {
+		font-size: 1.375rem; /* 22px */
+		line-height: calc(32 / 22);
+
+		@screen xl {
+			font-size: 1.5rem; /* 24px */
+			line-height: calc(32 / 24);
+		}
+	}
+
+	.text-large {
+		font-size: 1.875rem; /* 30px */
+		line-height: 1.4;
+
+		@screen xl {
+			font-size: 2rem; /* 32px */
+			line-height: 1.3125;
+		}
+	}
+
+	.display-1 {
+		font-size: 2.25rem; /* 36px */
+		line-height: calc(38.84 / 36);
+
+		@screen xl {
+			font-size: 2.375rem; /* 38px */
+			line-height: calc(38.84 / 41);
+		}
+	}
+
+	.display-2 {
+		font-size: 4rem; /* 64px */
+		line-height: calc(69.06 / 64);
+
+		@screen xl {
+			font-size: 6rem; /* 96px */
+			line-height: calc(103.58 / 96);
+		}
+	}
+}

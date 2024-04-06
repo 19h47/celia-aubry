@@ -1,0 +1,47 @@
+{#
+ # Archive: Contact Page
+ #
+ # @package WordPress
+ # @subpackage TrueStory
+ #}
+
+{% extends 'index.html.twig' %}
+
+{% block header %}
+	{%- embed 'header.html.twig' -%}
+		{% block link %}
+			<a href="{{ site.link }}" aria-label="{{ site.title }}" class="h-10 w-[2.375rem] block text-brand-jaune">
+				{{- icon( 'logo', { classes: [ 'size-full' ] } ) -}}
+			</a>
+		{% endblock %}
+	{%- endembed -%}
+{% endblock %}
+
+{% block content %}
+	<main class="mt-20 mb-10 xl:mt-24 xl:mb-20">
+		<div class="bg-brand-jaune relative">
+			<div class="xl:absolute xl:inset-0 py-10 xl:pt-20 xl:pb-0">
+				<div class="container xl:grid xl:grid-cols-12">
+					<div class="xl:col-span-5">
+						{{ yoast_breadcrumb() }}
+						<h1 class="h1 mt-6 xl:mt-8">{{- post.meta( 'hero' ).title | default( post.title ) -}}</h1>
+						<div class="text-large">{{- post.meta( 'hero' ).content | default( post.content ) }}</div>
+						<p class="text-medium mt-4 xl:mt-8">
+							<strong>{{- post.meta( 'hero' ).contact -}}</strong><br>
+							<a href="{{ post.meta( 'hero' ).email }}" class="link">aubrycelia.a@gmail.com</a>
+						</p>
+						<p class="text-small mt-8">{{- post.meta( 'hero' ).copyright -}}</p>
+					</div>
+				</div>
+			</div>
+
+			{{- include( 'components/image.html.twig', { image: post.thumbnail, classes: [ 'aspect-square xl:ml-auto block w-full xl:w-1/2 object-cover object-center' ] } ) -}}
+		</div>
+	</main>
+{% endblock %}
+
+{% block footer %}
+	{%- embed 'footer.html.twig' -%}
+		{% block contact %}{% endblock %}
+	{%- endembed -%}
+{% endblock %}

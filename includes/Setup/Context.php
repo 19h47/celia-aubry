@@ -55,36 +55,36 @@ class Context extends Site {
 		// Share and Socials links.
 		$socials = array(
 			array(
-				'title' => __( 'Facebook', 'le-chateau-des-ormeaux' ),
+				'title' => __( 'Facebook', 'celia-aubry' ),
 				'slug'  => 'facebook',
-				'name'  => __( 'Share on Facebook', 'le-chateau-des-ormeaux' ),
+				'name'  => __( 'Share on Facebook', 'celia-aubry' ),
 				'link'  => 'https://www.facebook.com/sharer.php?u=',
 				'url'   => get_option( 'facebook' ),
 				'color' => '#3b5998',
 			),
 			array(
-				'title' => __( 'Instagram', 'le-chateau-des-ormeaux' ),
+				'title' => __( 'Instagram', 'celia-aubry' ),
 				'slug'  => 'instagram',
 				'url'   => get_option( 'instagram' ),
 			),
 			array(
-				'title' => __( 'YouTube', 'le-chateau-des-ormeaux' ),
+				'title' => __( 'YouTube', 'celia-aubry' ),
 				'slug'  => 'youtube',
 				'url'   => get_option( 'youtube' ),
 				'color' => '#ff0000',
 			),
 			array(
-				'title' => __( 'Twitter', 'le-chateau-des-ormeaux' ),
+				'title' => __( 'Twitter', 'celia-aubry' ),
 				'slug'  => 'twitter',
-				'name'  => __( 'Share on Twitter', 'le-chateau-des-ormeaux' ),
+				'name'  => __( 'Share on Twitter', 'celia-aubry' ),
 				'link'  => 'https://twitter.com/intent/tweet?url=',
 				'url'   => get_option( 'twitter' ),
 				'color' => '#1da1f2',
 			),
 			array(
-				'title' => __( 'LinkedIn', 'le-chateau-des-ormeaux' ),
+				'title' => __( 'LinkedIn', 'celia-aubry' ),
 				'slug'  => 'linkedin',
-				'name'  => __( 'Share on LinkedIn', 'le-chateau-des-ormeaux' ),
+				'name'  => __( 'Share on LinkedIn', 'celia-aubry' ),
 				'link'  => 'https://www.linkedin.com/sharing/share-offsite/?url=',
 				'url'   => get_option( 'linkedin' ),
 				'color' => '#0077b5',
@@ -116,9 +116,13 @@ class Context extends Site {
 	public function add_to_context( array $context ): array {
 		global $wp;
 
-		$context['current_url']    = home_url( add_query_arg( array(), $wp->request ) );
+		$context['current_url'] = home_url( add_query_arg( array(), $wp->request ) );
 
 		$context['privacy_policy_url'] = get_privacy_policy_url();
+		$context['contact_url']        = get_permalink( get_option( 'page_for_contact' ) );
+
+		$context['authordescription'] = get_option( 'authordescription' );
+		$context['public_email']      = get_option( 'public_email' );
 
 		return $context;
 	}

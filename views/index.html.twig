@@ -9,7 +9,7 @@
 <html
     itemscope
     itemtype="http://schema.org/WebPage"
-    {{ html_class( 'no-js no-touch is-loading is-ontop' ) }}
+    {{ html_class( 'no-js no-touch' ) }}
     {{ site.language_attributes }}
 >
 
@@ -25,30 +25,33 @@
 
 	</head>
 
-	<body>
+	<body class="font-sans">
 
-		<div id="{{ post.id ? "page-#{post.id}" : 'page' }}" {{ body_class( 'page-content' ) }}>
+		<div id="{{ post.id ? "page-#{post.id}" : 'page' }}" {{ body_class( '' ) }}>
 
 			{% block header %}
 				{{- include( 'header.html.twig', { classes: [] } ) -}}
 			{% endblock %}
 
 			{%- block content -%}
-				<main>
-					CONTENT
 
-					{{ icon( 'arrow-down' ) }}
-					{{ icon( 'arrow-up-left' ) }}
-					{{ icon( 'arrow-up-right' ) }}
-					{{ icon( 'bars' ) }}
+				<main class="mt-20 mb-10 xl:mt-24 xl:mb-20">
 
-					<img src="{{ asset( 'src/img/svg/branding.svg' ) }}" alt="">
-					<img src="{{ asset( 'src/img/svg/dauxui.svg' ) }}" alt="">
-					<img src="{{ asset( 'src/img/svg/illustration.svg' ) }}" alt="">
-					<img src="{{ asset( 'src/img/svg/mouth.svg' ) }}" alt="">
-					<img src="{{ asset( 'src/img/svg/productdesign.svg' ) }}" alt="">
+					<div class="bg-brand-beige py-10 xl:py-20">
+						<div class="container">
+							{{- yoast_breadcrumb() -}}
+							<h1 class="h1 mt-6 xl:mt-8">{{- post.title -}}</h1>
+						</div>
+					</div>
 
-					<c-add cid="myAddComponentId" class="c-add" value="0" log></c-add>
+					{%- if post.content -%}
+						<div class="py-10 xl:py-20">
+							<div class="container wysiwyg">
+								{{- post.content -}}
+							</div>
+						</div>
+					{%- endif -%}
+
 				</main>
 			{%- endblock -%}
 

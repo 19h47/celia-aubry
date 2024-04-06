@@ -1,0 +1,32 @@
+{#
+ # Taxonomy: Case Study Cat
+ #
+ # @package WordPress
+ # @subpackage TrueStory
+ #}
+
+{% extends 'index.html.twig' %}
+
+{% block content %}
+	<main class="mt-20 mb-10 xl:mt-24 xl:mb-20">
+		<div class="bg-brand-beige py-10 xl:py-20">
+			<div class="container xl:grid xl:grid-cols-12 xl:items-center xl:gap-4">
+
+				<div class="xl:col-span-8">
+					{{- yoast_breadcrumb() -}}
+					<h1 class="h1 mt-6 xl:mt-8">{{- term.name -}}</h1>
+					<div class="text-neutral-900 mt-2 xl:mt-10 text-medium">{{- term.description -}}</div>
+				</div>
+
+				<div class="col-span-4 justify-center hidden xl:flex">
+					<img class="block" src="{{ asset( 'src/img/svg/' ~ term.meta( 'icon' ) ~ '.svg' ) }}" alt="" width="170" height="170">
+				</div>
+			</div>
+		</div>
+
+		{{- include( 'blocks/blocks.html.twig', { blocks: term.meta( 'blocks' ), classes: [] } ) -}}
+
+		{{- include( 'components/navigation.html.twig', { classes: [ 'mt-20' ], title: __( 'Discover other expertise', 'celia-aubry' ), previous: previous_term, next: next_term } ) -}}
+
+	</main>
+{% endblock %}

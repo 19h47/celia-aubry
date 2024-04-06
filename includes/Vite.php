@@ -8,15 +8,17 @@ class Vite {
 
 	/**
 	 * Flag to determine whether hot server is active.
-	 * Calculated when Vite::initialise() is called.
+	 *
+	 * Calculated when Vite::run() is called.
 	 *
 	 * @var bool
 	 */
-	private static bool $isHot = false;
+	private static bool $is_hot = false;
 
 	/**
-	 * The URI to the hot server. Calculated when
-	 * Vite::initialise() is called.
+	 * The URI to the hot server.
+	 *
+	 * Calculated when Vite::run() is called.
 	 *
 	 * @var string
 	 */
@@ -27,11 +29,12 @@ class Vite {
 	 *
 	 * @var string
 	 */
-	private static string $buildPath = 'dist';
+	private static string $build_path = 'dist';
 
 	/**
-	 * Manifest file contents. Initialised
-	 * when Vite::initialise() is called.
+	 * Manifest file contents.
+	 *
+	 * Initialised when Vite::run() is called.
 	 *
 	 * @var array
 	 */
@@ -39,26 +42,29 @@ class Vite {
 
 
 	/**
-	 * To be run in the header.php file, will check for the presence of a hot file.
+	 * Run
 	 *
-	 * @param  string|null $buildPath
+	 * @param  string|null $build_path
 	 * @param  bool        $output  Whether to output the Vite client.
 	 *
 	 * @return string|null
 	 * @throws Exception
 	 */
-	public static function run( string $buildPath = null, bool $output = true ): string|null {
+	public static function run( string $build_path = null, bool $output = true ): string|null {
+		if ( is_admin() ) {
+			return null;
+		}
 
-		static::$isHot = file_exists( static::hotFilePath() );
+		static::$is_hot = file_exists( static::hot_file_path() );
 
 		// have we got a build path override?
-		if ( $buildPath ) {
-			static::$buildPath = $buildPath;
+		if ( $build_path ) {
+			static::$build_path = $build_path;
 		}
 
 		// are we running hot?
-		if ( static::$isHot ) {
-			static::$server = file_get_contents( static::hotFilePath() );
+		if ( static::$is_hot ) {
+			static::$server = file_get_contents( static::hot_file_path() );
 			$client         = static::$server . '/@vite/client';
 
 			// if output
@@ -70,35 +76,34 @@ class Vite {
 		}
 
 		// we must have a manifest file...
-		if ( ! file_exists( $manifestPath = static::buildPath() . '/.vite/manifest.json' ) ) {
-			throw new Exception( __( 'No Vite Manifest exists. Should hot server be running?', 'wordpress-theme-vite' ) );
+		$manifest_path = static::build_path() . '/.vite/manifest.json';
+
+		if ( ! file_exists( $manifest_path ) ) {
+			throw new Exception( __( 'No Vite Manifest exists. Should hot server be running?', 'celia-aubry' ) );
 		}
 
 		// store our manifest contents.
-		static::$manifest = json_decode( file_get_contents( $manifestPath ), true );
+		static::$manifest = json_decode( file_get_contents( $manifest_path ), true );
 
 		return null;
 	}
 
 	/**
-	 * Enqueue the module
+	 * Enqueue the script module
 	 *
-	 * @param string|null $buildPath
+	 * @param string|null $build_path
 	 *
 	 * @return void
 	 * @throws Exception
 	 */
-	public static function enqueue_module( string $buildPath = null ): void {
+	public static function enqueue_script_module( string $build_path = null ): void {
 		// we only want to continue if we have a client.
-		if ( ! $client = self::run( $buildPath, false ) ) {
+		if ( ! $client = self::run( $build_path, false ) ) {
 			return;
 		}
 
 		// enqueue our client script
-		wp_enqueue_script( 'vite-client', $client, array(), null );
-
-		// update html script type to module wp hack
-		self::script_type_module( 'vite-client' );
+		wp_enqueue_script_module( 'vite-client', $client, array(), null );
 	}
 
 	/**
@@ -110,7 +115,7 @@ class Vite {
 	 * @throws Exception
 	 */
 	public static function asset( $asset ): string {
-		if ( static::$isHot ) {
+		if ( static::$is_hot ) {
 			return static::$server . '/' . ltrim( $asset, '/' );
 		}
 
@@ -118,25 +123,25 @@ class Vite {
 			throw new Exception( __( 'Unknown Vite build asset: ' . $asset, 'celia-aubry' ) );
 		}
 
-		return implode( '/', array( get_stylesheet_directory_uri(), static::$buildPath, static::$manifest[ $asset ]['file'] ) );
+		return implode( '/', array( get_stylesheet_directory_uri(), static::$build_path, static::$manifest[ $asset ]['file'] ) );
 	}
 
 	/**
-	 * Internal method to determine hotFilePath.
+	 * Internal method to determine hot_file_path.
 	 *
 	 * @return string
 	 */
-	private static function hotFilePath(): string {
-		return implode( '/', array( static::buildPath(), 'hot' ) );
+	private static function hot_file_path(): string {
+		return implode( '/', array( static::build_path(), 'hot' ) );
 	}
 
 	/**
-	 * Internal method to determine buildPath.
+	 * Internal method to determine build_path.
 	 *
 	 * @return string
 	 */
-	private static function buildPath(): string {
-		return implode( '/', array( get_stylesheet_directory(), static::$buildPath ) );
+	private static function build_path(): string {
+		return implode( '/', array( get_stylesheet_directory(), static::$build_path ) );
 	}
 
 	/**
@@ -164,33 +169,5 @@ class Vite {
 			return $e->getMessage(); // optionally, you can retrieve the error message
 
 		}
-	}
-
-	/**
-	 * Update html script type to module wp hack.
-	 *
-	 * @param $scriptHandle bool|string
-	 * @return mixed
-	 */
-	public static function script_type_module( bool|string $scriptHandle = false ): string {
-
-		// change the script type to module
-		add_filter(
-			'script_loader_tag',
-			function ( $tag, $handle, $src ) use ( $scriptHandle ) {
-
-				if ( $scriptHandle !== $handle ) {
-					return $tag;
-				}
-
-				// return the new script module type tag
-				return '<script type="module" src="' . esc_url( $src ) . '" id="' . $handle . '-js"></script>';
-			},
-			10,
-			3
-		);
-
-		// return false
-		return false;
 	}
 }

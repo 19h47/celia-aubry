@@ -1,0 +1,17 @@
+@layer components {
+	.button {
+		@apply p-6 border rounded-full border-current transition-colors duration-300 ease-in-out;
+
+		display: inline-flex;
+		font-size: 1.125rem;
+		line-height: calc(22 / 18);
+	}
+
+	.button:hover {
+		@apply bg-brand-jaune border-brand-jaune text-neutral-900;
+	}
+
+	.button.button-neutral-900:hover {
+		@apply bg-neutral-900 border-neutral-900 text-white;
+	}
+}

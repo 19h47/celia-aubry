@@ -1,0 +1,30 @@
+{#
+ # Blocks: Title, Content & Link
+ #}
+
+{%- if block.title or block.content or block.link.url -%}
+	{% set background_color = {
+		dark: 'bg-neutral-900 text-white',
+		beige: 'bg-brand-beige',
+		light: 'bg-white',
+	} %}
+
+	<div class="{{ html_classes( 'py-10 xl:py-20', background_color[ block.background_color | default( 'light' ) ] ) }}">
+		<div class="container space-y-6">
+			{%- if block.title -%}
+				<h2 class="h2 text-balance">{{- block.title -}}</h2>
+			{%- endif -%}
+
+			{%- if block.content -%}
+				<div class="wysiwyg">{{- block.content -}}</div>
+			{%- endif -%}
+
+			{% if block.link.url %}
+				<a class="button" href="{{ block.link.url }}" {{ block.link.target ? 'rel="noopener noreferer" target="_blank"' }}>
+					{{ block.link.title }}
+				</a>
+			{% endif %}
+
+		</div>
+	</div>
+{%- endif -%}

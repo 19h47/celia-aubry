@@ -1,17 +1,17 @@
 <?php // phpcs:ignore
 /**
- * Supports
+ * Theme
  *
  * @package WordPress
- * @subpackage CeliaAubry/Setup/Supports
+ * @subpackage CeliaAubry/Theme
  */
 
-namespace CeliaAubry\Setup;
+namespace CeliaAubry;
 
 /**
- * Supports
+ * Theme
  */
-class Supports {
+class Theme {
 
 	/**
 	 * Runs initialization tasks.
@@ -19,9 +19,7 @@ class Supports {
 	 * @return void
 	 */
 	public function run(): void {
-		add_action( 'init', array( $this, 'add_theme_supports' ) );
-		add_action( 'init', array( $this, 'add_post_type_supports' ) );
-		add_action( 'init', array( $this, 'remove_post_type_supports' ) );
+		add_action( 'after_setup_theme', array( $this, 'add_theme_supports' ) );
 	}
 
 
@@ -54,25 +52,7 @@ class Supports {
 				'caption',
 			)
 		);
-	}
 
-
-	/**
-	 * Add post type supports.
-	 *
-	 * @return void
-	 */
-	public function add_post_type_supports() {
-		add_post_type_support( 'page', 'excerpt' );
-	}
-
-
-	/**
-	 * Remove post type support.
-	 *
-	 * @return void
-	 */
-	public function remove_post_type_supports() {
-		// remove_post_type_support( 'page', 'editor' );
+		add_theme_support( 'yoast-seo-breadcrumbs' );
 	}
 }

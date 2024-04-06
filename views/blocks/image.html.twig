@@ -1,0 +1,43 @@
+{#
+ # Blocks: Image
+ #}
+
+{% set aspect_ratio = {
+	auto: 'aspect-auto',
+	square: 'aspect-square',
+	video: 'aspect-video',
+	'2/1': 'aspect-[2/1]'
+} %}
+
+{%- if block.full_width -%}
+	{{-
+		include(
+			'components/image.html.twig',
+			{
+				image: block.image,
+				classes: [
+					'block object-cover',
+					block.margins ? 'py-10 xl:py-20' : '',
+					aspect_ratio[ block.aspect_ratio ]
+				]
+			}
+		)
+	-}}
+{%- else -%}
+	<div class="{{ html_classes( block.margins ? 'py-10 xl:py-20' : '' ) }}">
+		<div class="container">
+			{{-
+				include(
+					'components/image.html.twig',
+					{
+						image: block.image,
+						classes: [
+							'block object-cover rounded-[1.25rem]',
+							aspect_ratio[ block.aspect_ratio ]
+						]
+					}
+				)
+			-}}
+		</div>
+	</div>
+{%- endif -%}

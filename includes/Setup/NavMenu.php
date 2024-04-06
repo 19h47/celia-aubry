@@ -32,9 +32,9 @@ class NavMenu {
 	public function register_menus(): void {
 		register_nav_menus(
 			array(
-				'main'   => __( 'Main Menu', 'le-chateau-des-ormeaux' ),
-				'footer' => __( 'Footer Menu', 'le-chateau-des-ormeaux' ),
-				'legals' => __( 'Legals Menu', 'le-chateau-des-ormeaux' ),
+				'main'   => __( 'Main Menu', 'celia-aubry' ),
+				'footer' => __( 'Footer Menu', 'celia-aubry' ),
+				'legals' => __( 'Legals Menu', 'celia-aubry' ),
 			)
 		);
 	}

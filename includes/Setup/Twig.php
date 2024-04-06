@@ -143,16 +143,16 @@ class Twig {
 			)
 		);
 
-		if ( function_exists( 'yoast_breadcrumb' ) ) {
-			$twig->addFunction(
-				new TwigFunction(
-					'yoast_breadcrumb',
-					function ( $before = '', $after = '', $display = true ) {
-						return yoast_breadcrumb( $before, $after, $display );
-					}
-				)
-			);
-		}
+
+		$twig->addFunction(
+			new TwigFunction(
+				'yoast_breadcrumb',
+				function ( $before = '<div class="breadcrumb">', $after = '</div>', $display = false ) {
+					return function_exists( 'yoast_breadcrumb' ) ? yoast_breadcrumb( $before, $after, $display ) : '';
+				}
+			)
+		);
+
 
 		return $twig;
 	}

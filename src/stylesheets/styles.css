@@ -1,0 +1,19 @@
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+@import "components/breadcrumb.css";
+@import "components/button.css";
+@import "components/link.css";
+@import "components/wysiwyg.css";
+
+@import "tailwindcss/utilities";
+@import "utilities/typography.css";
+
+/* Maghfirea */
+@font-face {
+	font-family: "Maghfirea";
+	src: url("../fonts/maghfirea/maghfirea-regular.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+	font-display: block;
+}

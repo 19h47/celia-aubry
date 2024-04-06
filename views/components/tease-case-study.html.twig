@@ -1,0 +1,22 @@
+{#
+ # Tease: Case Study
+ #}
+
+{% set tags = post.terms({ taxonomy: 'case_study_tag' }) %}
+
+<a class="space-y-6" href="{{ post.link }}">
+	{%- if post.thumbnail -%}
+		{{- include( 'components/image.html.twig', { image: post.thumbnail, classes: [ 'aspect-video rounded-[1.25rem]' ] } ) -}}
+	{%- else -%}
+		<div class="aspect-video bg-brand-rose rounded-[1.25rem]"></div>
+	{%- endif -%}
+	<div class="h4">
+		<h3 class="inline h4-bold">{{- post.title -}}</h3>
+		{{- tags ? ' - ' ~ ( tags | map( t => t.name ) | join( ' - ' ) ) : '' -}}
+	</div>
+
+	<div class="mt-4 flex text-medium">
+		{{- post.meta( 'date' ) -}}
+		{{ icon( 'arrow-up-right', { classes: [ 'ml-auto size-8' ] } ) }}
+	</div>
+</a>

@@ -3,7 +3,8 @@
 		"timber/timber": "^2.0",
 		"twig/html-extra": "^3.8",
 		"twig/intl-extra": "^3.8",
-		"19h47/wp-get-theme": "dev-master"
+		"19h47/wp-get-theme": "dev-master",
+		"19h47/wp-form-controls": "dev-master"
 	},
 	"name": "19h47/celia-aubry",
 	"description": "WordPress Theme for Célia Aubry",
@@ -20,7 +21,8 @@
 		},
 		"files": [
 			"./includes/helpers.php",
-			"./vendor/19h47/wp-get-theme/wp-get-theme.php"
+			"./vendor/19h47/wp-get-theme/wp-get-theme.php",
+			"./vendor/19h47/wp-form-controls/wp-form-controls.php"
 		]
 	},
 	"config": {
@@ -29,6 +31,18 @@
 		}
 	},
 	"repositories": [
+		{
+			"type": "package",
+			"package": {
+				"name": "19h47/wp-form-controls",
+				"version": "master",
+				"source": {
+					"url": "https://gist.github.com/5bc7dc96204d7290ce781a54756e0a7b.git",
+					"type": "git",
+					"reference": "master"
+				}
+			}
+		},
 		{
 			"type": "package",
 			"package": {

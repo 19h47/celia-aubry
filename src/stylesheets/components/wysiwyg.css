@@ -1,0 +1,45 @@
+@layer components {
+	.wysiwyg {
+		@apply text-medium;
+	}
+
+	.wysiwyg > *:first-child {
+		margin-top: 0;
+	}
+	.wysiwyg > *:last-child {
+		margin-bottom: 0;
+	}
+
+	.wysiwyg p {
+		margin-bottom: 1rem;
+	}
+
+	.wysiwyg a {
+		text-decoration: underline;
+	}
+
+	.wysiwyg h2, .wysiwyg h3 {
+		text-wrap: balance;
+	}
+
+	.wysiwyg h2 {
+		@apply h2;
+
+		margin-top: 2.5rem;
+		margin-bottom: 1rem;
+	}
+
+	.wysiwyg h3 {
+		@apply h3;
+
+		margin-top: 2.5rem;
+		margin-bottom: 1rem;
+	}
+
+	.wysiwyg ul {
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+		padding-left: 2.5rem;
+		list-style-type: disc;
+	}
+}

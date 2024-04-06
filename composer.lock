@@ -4,8 +4,18 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1adbf677015c218a2f56ed9984db55f1",
+    "content-hash": "f50b98120192eda67b67483b7be9c687",
     "packages": [
+        {
+            "name": "19h47/wp-form-controls",
+            "version": "master",
+            "source": {
+                "type": "git",
+                "url": "https://gist.github.com/5bc7dc96204d7290ce781a54756e0a7b.git",
+                "reference": "master"
+            },
+            "type": "library"
+        },
         {
             "name": "19h47/wp-get-theme",
             "version": "master",
@@ -1091,7 +1101,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "19h47/wp-get-theme": 20
+        "19h47/wp-get-theme": 20,
+        "19h47/wp-form-controls": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

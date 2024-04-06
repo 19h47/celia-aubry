@@ -1,0 +1,68 @@
+{#
+ # Archive: About Page
+ #
+ # @package WordPress
+ # @subpackage TrueStory
+ #}
+
+{% extends 'index.html.twig' %}
+
+{% block header %}
+	{%- embed 'header.html.twig' -%}
+		{% block link %}
+			<a href="{{ site.link }}" aria-label="{{ site.title }}" class="h-10 w-[2.375rem] block text-brand-rose">
+				{{- icon( 'logo', { classes: [ 'size-full' ] } ) -}}
+			</a>
+		{% endblock %}
+	{%- endembed -%}
+{% endblock %}
+
+{% block content %}
+	<main class="mt-20 mb-10 xl:mt-24 xl:mb-20">
+		<div class="bg-brand-rose relative py-10 xl:py-20">
+
+			<div class="container xl:grid xl:grid-cols-12">
+				<div class="xl:col-span-5">
+					{{- yoast_breadcrumb() -}}
+				</div>
+
+				<div class="xl:col-span-10 xl:col-start-2 text-center">
+					<div class="mt-10 text-large">
+						<p>Dans un monde où l'image et l'identité visuelle règnent en maîtres, la recherche de talents créatifs devient une quête essentielle. Je me distingue comme une designer dont l'expertise embrasse le design digital, le branding et l'illustration. </p>
+					</div>
+					<h1 class="h1 mt-6 xl:mt-8">{{- post.title -}}</h1>
+
+				</div>
+			</div>
+
+			<div class="container mt-10 xl:mt-20 xl:grid xl:grid-cols-12">
+				<div class="xl:col-span-8 xl:col-start-3">
+					<div class="px-10 pb-10 mt-[1.90625rem] pt-[0.59375rem] bg-white relative xl:mx-12">
+						<div class="stamp absolute top-0 inset-x-0 -mt-[1.90625rem]"></div>
+						<style>
+							.stamp {
+								background: radial-gradient(
+									transparent 0px,
+									transparent .875rem,
+									white .875rem,
+									white
+								);
+
+								background-size: 3.8125rem 3.8125rem;
+								background-position: center -1.90625rem;
+								background-repeat: repeat-x;
+								height: 1.90625rem;
+							}
+						</style>
+
+
+						<div class="wysiwyg">{{- post.content -}}</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		{{- include( 'blocks/blocks.html.twig', { blocks: post.meta( 'blocks' ), classes: [] } ) -}}
+	</main>
+{% endblock %}

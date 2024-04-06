@@ -1,0 +1,19 @@
+{#
+ # Blocks: Title, Content & Images
+ #}
+
+<div class="{{ html_classes( 'py-10 xl:py-20' ) }}">
+	<div class="container xl:grid xl:grid-cols-2 xl:gap-4">
+		<div class="xk:col-span-1 space-y-6">
+			{%- for image in block.images -%}
+				{{- include( 'components/image.html.twig', { image: image, classes: [ 'rounded-[1.25rem] aspect-square object-cover' ] } ) -}}
+			{%- endfor -%}
+		</div>
+		<div class="xl:col-span-1 space-y-6 xl:space-y-4 mt-16 xl:mt-0">
+			<div class="xl:ml-12 xl:sticky xl:top-28 xl:inset-x-0 space-y-4">
+				<h2 class="h3">{{- block.title -}}</h2>
+				<div class="wysiwyg">{{- block.content -}}</div>
+			</div>
+		</div>
+	</div>
+</div>

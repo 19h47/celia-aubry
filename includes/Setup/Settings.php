@@ -37,38 +37,43 @@ class Settings {
 			'reading'
 		);
 
-		add_settings_section(
-			'socials',
-			'',
-			array( $this, 'socials_callback_function' ),
-			'general'
-		);
-
 		add_settings_field(
-			'linkedin',
-			__( 'LinkedIn', 'le-chateau-des-ormeaux' ),
-			array( $this, 'text_callback_function' ),
-			'general',
-			'socials',
+			'public_email',
+			__( 'Public Email Address', 'celia-aubry' ),
+			array( $this, 'email_callback_function' ),
+			'reading',
+			'contacts',
 			array(
-				'type'        => 'url',
-				'name'        => 'linkedin',
-				'placeholder' => 'https://www.linkedin.com/artvandelay',
-				'description' => __( 'Enter the LinkedIn URL here.', 'le-chateau-des-ormeaux' ),
+				'name'        => 'public_email',
+				'label'       => __( 'Email', 'celia-aubry' ),
+				'description' => __( 'This email address is used for public purposes.', 'celia-aubry' ),
+				'placeholder' => 'artvandelay@vandelayindustries.com',
 			)
 		);
 
 		add_settings_field(
-			'instagram',
-			__( 'Instagram', 'le-chateau-des-ormeaux' ),
-			array( $this, 'text_callback_function' ),
-			'general',
-			'socials',
+			'authordescription',
+			__( 'Author Description', 'celia-aubry' ),
+			array( $this, 'textarea_callback_function' ),
+			'reading',
+			'default',
 			array(
-				'type'        => 'url',
-				'name'        => 'instagram',
-				'placeholder' => 'https://instagram.com/artvandelay',
-				'description' => __( 'Enter the Instagram URL here.', 'le-chateau-des-ormeaux' ),
+				'id'          => 'authordescription',
+				'name'        => 'authordescription',
+				'rows'        => 2,
+				'value'       => get_option( 'authordescription' ),
+				'placeholder' => __( 'Author Description', 'celia-uabry' ),
+			)
+		);
+
+		add_settings_field(
+			'page_for_contact',
+			__( 'Contact Page', 'celia-aubry' ),
+			array( $this, 'dropdown_pages_callback_function' ),
+			'reading',
+			'default',
+			array(
+				'name' => 'page_for_contact',
 			)
 		);
 	}
@@ -111,7 +116,7 @@ class Settings {
 			)
 		);
 
-		if ( $args['description'] ) {
+		if ( isset( $args['description'] ) && ! empty( $args['description'] ) ) {
 			echo wp_kses_post( '<p class="description">' . $args['description'] . '</p>' );
 		}
 	}
@@ -203,14 +208,17 @@ class Settings {
 	 * @return void
 	 */
 	public function register_settings(): void {
-		$args = array(
-			'type'              => 'string',
-			'sanitize_callback' => 'sanitize_text_field',
-			'default'           => null,
+		register_setting(
+			'reading',
+			'page_for_contact',
+			array(
+				'type'              => 'integer',
+				'sanitize_callback' => 'sanitize_text_field',
+				'default'           => null,
+			)
 		);
 
-		foreach ( array( 'linkedin', 'instagram' ) as $setting ) {
-			register_setting( 'general', $setting, $args );
-		}
+		register_setting( 'reading', 'public_email' );
+		register_setting( 'reading', 'authordescription' );
 	}
 }
