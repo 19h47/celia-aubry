@@ -36,6 +36,7 @@
 								'after:bottom-0 after:mx-6 after:inset-x-0 after:bg-neutral-900 after:absolute after:h-px after:scale-x-0 after:origin-right after:transition-transform after:duration-300 after:ease-in-out',
 								'hover:after:scale-x-100 hover:after:origin-left',
 								item.classes | join( ' ' ),
+								item.current or item.current_item_parent ? 'font-bold' : '',
 							) }}"
 						>
 							{{- item.title -}}
@@ -52,6 +53,7 @@
 												'px-6 py-[2.375rem] relative after:bottom-0 after:mx-6 after:inset-x-0 after:bg-neutral-900 after:absolute after:h-px after:origin-right after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out',
 												'hover:after:scale-x-100 hover:after:origin-left',
 												child.master_object.meta( 'icon' ) ? 'flex gap-2' : 'block',
+												child.current or child.current_item_parent ? 'font-bold' : '',
 												child.classes | join( ' ' ),
 											) }}"
 											itemprop="url"
@@ -74,6 +76,7 @@
 								'after:bottom-0 after:mx-6 after:inset-x-0 after:bg-neutral-900 after:absolute after:h-px after:scale-x-0 after:origin-right after:transition-transform after:duration-300 after:ease-in-out',
 								'hover:after:scale-100 hover:after:origin-left',
 								item.classes | join( ' ' ),
+								item.current or item.current_item_parent ? 'font-bold' : '',
 							) }}"
 							itemprop="url"
 							{{ item.is_target_blank or item.is_external ? " target=\"#{item.target}\" rel=\"noopener noreferer\"" }}
