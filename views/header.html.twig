@@ -33,7 +33,6 @@
 							type="button"
 							class="{{ html_classes(
 								'px-6 py-9 flex gap-1 items-center relative after:bottom-0 after:mx-6 after:inset-x-0 after:bg-neutral-900 after:absolute after:h-px after:opacity-0 after:transition-opacity after:duration-300 after:ease-in-out hover:after:opacity-100',
-								item.current or item.current_item_parent ? 'after:opacity-100' : '',
 								item.classes | join( ' ' ),
 							) }}"
 						>
@@ -50,7 +49,6 @@
 											class="{{ html_classes(
 												'px-6 py-[2.375rem] relative after:bottom-0 after:mx-6 after:inset-x-0 after:bg-neutral-900 after:absolute after:h-px after:opacity-0 after:transition-opacity after:duration-300 after:ease-in-out hover:after:opacity-100',
 												child.master_object.meta( 'icon' ) ? 'flex gap-2' : 'block',
-												child.current ? 'after:opacity-100' : '',
 												child.classes | join( ' ' ),
 											) }}"
 											itemprop="url"
@@ -70,7 +68,6 @@
 							href="{{ item.url }}"
 							class="{{ html_classes(
 								'px-6 py-9 block relative after:bottom-0 after:mx-6 after:inset-x-0 after:bg-neutral-900 after:absolute after:h-px after:opacity-0 after:transition-opacity after:duration-300 after:ease-in-out hover:after:opacity-100',
-								item.current ? 'after:opacity-100' : '',
 								item.classes | join( ' ' ),
 							) }}"
 							itemprop="url"

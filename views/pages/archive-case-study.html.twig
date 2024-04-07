@@ -11,31 +11,31 @@
 	<main class="mt-20 mb-10 xl:mt-24 xl:mb-20">
 		<div class="bg-neutral-900 text-white relative py-10 xl:py-20">
 
-			<div class="container">
-				{{- yoast_breadcrumb() -}}
-				<h1 class="h1 mt-6 xl:mt-8">{{ __( 'Case Studies', 'celia-aubry' ) }}</h1>
-			</div>
 
-			<c-load-posts class="mt-10 block" data-posts-per-page="-1" data-post-type="case_study">
+			<c-load-posts class="block" data-posts-per-page="-1" data-post-type="case_study">
 
-				<div>
-					<div class="container">
-						<p class="h3">{{ __( 'Filter by expertise', 'celia-aubry' ) }}</p>
+				<div class="container">
+					{{- yoast_breadcrumb() -}}
+					<h1 class="h1 mt-6 xl:mt-8">{{ __( 'Case Studies', 'celia-aubry' ) }}</h1>
+				</div>
 
-						<div class="mt-4 text-regular flex gap-x-6 gap-y-4 flex-wrap">
+				<div class="container mt-10 hidden xl:block">
+					<p class="h3">{{ __( 'Filter by expertise', 'celia-aubry' ) }}</p>
 
-							<button type="button" data-filter class="is-active link [&.is-active]:text-brand-jaune [&.is-active]:font-bold">
-								{{- __( 'All case studies', 'celia-aubrey' ) -}}
+					<div class="mt-4 text-regular flex gap-x-6 gap-y-4 flex-wrap">
+
+						<button type="button" data-filter class="is-active link [&.is-active]:text-brand-jaune [&.is-active]:font-bold">
+							{{- __( 'All case studies', 'celia-aubrey' ) -}}
+						</button>
+
+						{% for cat in get_terms({ taxonomy: 'case_study_cat' }) %}
+							<button class="[&.is-active]:text-brand-jaune [&.is-active]:font-bold link" type="button" data-filter data-taxonomy="{{ cat.taxonomy }}" value="{{ cat.term_id }}">
+								{{ cat.name }}
 							</button>
-
-							{% for cat in get_terms({ taxonomy: 'case_study_cat' }) %}
-								<button class="[&.is-active]:text-brand-jaune [&.is-active]:font-bold link" type="button" data-filter data-taxonomy="{{ cat.taxonomy }}" value="{{ cat.term_id }}">
-									{{ cat.name }}
-								</button>
-							{% endfor %}
-						</div>
+						{% endfor %}
 					</div>
 				</div>
+
 
 				<div class="h3 mt-20 mb-10 hidden xl:block">
 					<div class="container grid grid-cols-12 items-center gap-4">
@@ -53,6 +53,25 @@
 				<div class="mt-14 xl:mt-0" data-container>
 					{{- include( 'components/collection-case-study.html.twig', { posts: posts } ) -}}
 				</div>
+
+				<div class="sticky bottom-0 xl:hidden bg-neutral-900 py-4">
+					<div class="container">
+						<p class="h3">{{ __( 'Filter by expertise', 'celia-aubry' ) }}</p>
+
+						<div class="mt-4 text-regular flex gap-x-6 gap-y-4 flex-wrap">
+
+							<button type="button" data-filter class="is-active link [&.is-active]:text-brand-jaune [&.is-active]:font-bold">
+								{{- __( 'All case studies', 'celia-aubry' ) -}}
+							</button>
+
+							{% for cat in get_terms({ taxonomy: 'case_study_cat' }) %}
+								<button class="[&.is-active]:text-brand-jaune [&.is-active]:font-bold link" type="button" data-filter data-taxonomy="{{ cat.taxonomy }}" value="{{ cat.term_id }}">
+									{{ cat.name }}
+								</button>
+							{% endfor %}
+						</div>
+					</div>
+				</div
 			</c-load-posts>
 
 		</div>

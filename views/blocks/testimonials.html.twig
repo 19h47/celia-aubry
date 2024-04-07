@@ -10,9 +10,9 @@
 			</div>
 		{%- endif -%}
 
-		<div class="container">
+		<div class="container grid gap-6 xl:auto-rows-fr">
 			{% for item in block.items %}
-				<div class="{{ html_classes( loop.first ? '': 'mt-6', 'bg-brand-beige p-10 rounded-[1.25rem] space-y-6 xl:sticky xl:top-28' ) }}">
+				<div class="{{ html_classes( 'bg-brand-beige p-10 rounded-[1.25rem] space-y-6 xl:sticky xl:top-28' ) }}">
 					<div class="flex gap-4">
 						<div class="text-[7.5rem] leading-[4.5625rem] font-serif">
 							“

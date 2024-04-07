@@ -37,7 +37,7 @@
 				{%- endif -%}
 
 				{% if post.meta( 'link' ).url %}
-					<a class="button mt-10" href="{{ post.meta( 'link' ).url }}" {{ post.meta( 'link' ).target ? 'rel="noopener noreferer" target="_blank"' }}>
+					<a class="button button-neutral-900 mt-10" href="{{ post.meta( 'link' ).url }}" {{ post.meta( 'link' ).target ? 'rel="noopener noreferer" target="_blank"' }}>
 						{{ post.meta( 'link' ).title | default( __( 'See the website', 'celia-aubry' ) ) }}
 					</a>
 				{% endif %}

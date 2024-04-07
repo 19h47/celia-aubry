@@ -81,13 +81,6 @@ class ContactPageFields {
 						'type'        => 'email',
 						'placeholder' => __( 'artvandelay@vandelayindustries.com', 'celia-aubry' ),
 					),
-					array(
-						'key'         => 'field_' . $key . '_hero_copyright',
-						'label'       => __( 'Copyright', 'celia-aubry' ),
-						'name'        => 'copyright',
-						'type'        => 'text',
-						'placeholder' => __( 'Copyright', 'celia-aubry' ),
-					),
 				),
 			),
 		);

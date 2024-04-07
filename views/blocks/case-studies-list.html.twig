@@ -5,7 +5,7 @@
 {% set args = {
 	post_type: 'case_study',
 	posts_per_page: -1,
-	posts__in: block.case_studies,
+	post__in: block.case_studies,
 	orderby: 'posts__in',
 } %}
 

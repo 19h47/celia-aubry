@@ -44,8 +44,13 @@
 	.h4-bold {
 		@apply font-bold;
 
-		font-size: 1.875rem; /* 30px */
-		line-height: calc(35.97 / 30);
+		font-size: 1.625rem; /* 26px */
+		line-height: calc(31.17 / 26);
+
+		@screen xl {
+			font-size: 1.875rem; /* 30px */
+			line-height: calc(35.97 / 30);
+		}
 	}
 
 	.text-small {
