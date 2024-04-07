@@ -1,23 +1,22 @@
-import { Piece } from 'piecesjs'
-import { gsap } from 'gsap'
-import { disableScroll, enableScroll } from '../utils/scroll';
-
+import { Piece } from "piecesjs";
+import { gsap } from "gsap";
+import { disableScroll, enableScroll } from "../utils/scroll";
 
 export class Nav extends Piece {
 	constructor() {
-		super('Nav');
+		super("Nav");
 	}
 
 	toggle() {
-		console.log('Nav.toggle()', this.value);
-		this.value = !JSON.parse(this.value)
+		console.log("Nav.toggle()", this.value);
+		this.value = !JSON.parse(this.value);
 	}
 
 	open() {
 		// console.log('Nav.open()')
 
-		this.classList.add('is-active');
-		gsap.to(this, { autoAlpha: 1, duration: 0.3, ease: "power1.inOut", });
+		this.classList.add("is-active");
+		gsap.to(this, { autoAlpha: 1, duration: 0.3, ease: "power1.inOut" });
 
 		// When Nav is open, disableScroll
 		disableScroll();
@@ -26,23 +25,23 @@ export class Nav extends Piece {
 	close() {
 		// console.log('Nav.close()')
 
-		this.classList.remove('is-active');
-		gsap.to(this, { autoAlpha: 0, duration: 0.3, ease: "power1.inOut", });
+		this.classList.remove("is-active");
+		gsap.to(this, { autoAlpha: 0, duration: 0.3, ease: "power1.inOut" });
 
 		// When Nav is closed, enableScroll
 		enableScroll();
 	}
 
 	set value(value) {
-		this.setAttribute('value', value);
+		this.setAttribute("value", value);
 	}
 
 	get value() {
-		return this.getAttribute('value');
+		return this.getAttribute("value");
 	}
 
 	static get observedAttributes() {
-		return ['value'];
+		return ["value"];
 	}
 
 	attributeChangedCallback(name, oldValue, newValue) {
@@ -58,4 +57,4 @@ export class Nav extends Piece {
 	}
 }
 
-customElements.define('c-nav', Nav);
+customElements.define("c-nav", Nav);
