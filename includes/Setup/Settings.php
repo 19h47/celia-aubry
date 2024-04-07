@@ -20,7 +20,30 @@ class Settings {
 	 */
 	public function run(): void {
 		add_action( 'admin_init', array( $this, 'settings_api_init' ) );
-		add_action( 'init', array( $this, 'register_settings' ) );
+		add_action( 'admin_init', array( $this, 'save_bases' ) );
+		add_action( 'admin_init', array( $this, 'register_settings' ) );
+	}
+
+	/**
+	 * Save Bases
+	 *
+	 * WordPress doens't save customs options on permalink page.
+	 */
+	function save_bases() {
+
+		if ( isset( $_POST['permalink_structure'] ) && isset( $_POST['case_study_base'] ) ) {
+
+			$short_domain = wp_unslash( $_POST['case_study_base'] );
+			update_option( 'case_study_base', $short_domain );
+
+		}
+
+		if ( isset( $_POST['permalink_structure'] ) && isset( $_POST['case_study_cat_base'] ) ) {
+
+			$short_domain = wp_unslash( $_POST['case_study_cat_base'] );
+			update_option( 'case_study_cat_base', $short_domain );
+
+		}
 	}
 
 
@@ -30,11 +53,44 @@ class Settings {
 	 * @return void
 	 */
 	public function settings_api_init(): void {
+		// Contacts
 		add_settings_section(
 			'contacts',
 			'',
-			array( $this, 'contacts_callback_function' ),
+			array( $this, 'section_callback_function' ),
 			'reading'
+		);
+
+		// Custom Post Types Bases
+		add_settings_section(
+			'bases',
+			'',
+			array( $this, 'section_callback_function' ),
+			'permalink',
+		);
+
+		add_settings_field(
+			'case_study_base',
+			__( 'Case Study Base', 'celia-aubry' ),
+			array( $this, 'text_callback_function' ),
+			'permalink',
+			'bases',
+			array(
+				'type' => 'text',
+				'name' => 'case_study_base',
+			)
+		);
+
+		add_settings_field(
+			'case_study_cat_base',
+			__( 'Case Study Cat Base', 'celia-aubry' ),
+			array( $this, 'text_callback_function' ),
+			'permalink',
+			'bases',
+			array(
+				'type' => 'text',
+				'name' => 'case_study_cat_base',
+			)
 		);
 
 		add_settings_field(
@@ -80,21 +136,11 @@ class Settings {
 
 
 	/**
-	 * Socials callback function
-	 *
-	 * @return void
-	 */
-	public function socials_callback_function(): void {
-		echo '';
-	}
-
-
-	/**
 	 * Contacts callback function
 	 *
 	 * @return void
 	 */
-	public function contacts_callback_function(): void {
+	public function section_callback_function(): void {
 		echo '';
 	}
 
@@ -135,8 +181,8 @@ class Settings {
 				'type'        => isset( $args['type'] ) && ! empty( $args['type'] ) ? $args['type'] : 'text',
 				'name'        => $args['name'],
 				'value'       => get_option( $args['name'] ),
-				'placeholder' => $args['placeholder'],
-				'description' => isset( $args['description'] ) && ! empty( $args['description'] ) ? $args['description'] : $args['placeholder'],
+				'placeholder' => isset( $args['placeholder'] ) ? $args['placeholder'] : '',
+				'description' => isset( $args['description'] ) && ! empty( $args['description'] ) ? $args['description'] : '',
 			),
 		);
 	}
@@ -220,5 +266,15 @@ class Settings {
 
 		register_setting( 'reading', 'public_email' );
 		register_setting( 'reading', 'authordescription' );
+
+		register_setting(
+			'options',
+			'case_study_base',
+			array(
+				'type'              => 'string',
+				'sanitize_callback' => 'sanitize_text_field',
+				'default'           => null,
+			)
+		);
 	}
 }

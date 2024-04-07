@@ -155,7 +155,7 @@ class CaseStudy {
 		);
 
 		$rewrite = array(
-			'slug'       => 'case-studies',
+			'slug'       => get_option( 'case_study_base' ),
 			'with_front' => true,
 		);
 

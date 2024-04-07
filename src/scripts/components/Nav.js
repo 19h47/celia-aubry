@@ -17,7 +17,7 @@ export class Nav extends Piece {
 		// console.log('Nav.open()')
 
 		this.classList.add('is-active');
-		gsap.to(this, { autoAlpha: 1 });
+		gsap.to(this, { autoAlpha: 1, duration: 0.3, ease: "power1.inOut", });
 
 		// When Nav is open, disableScroll
 		disableScroll();
@@ -27,7 +27,7 @@ export class Nav extends Piece {
 		// console.log('Nav.close()')
 
 		this.classList.remove('is-active');
-		gsap.to(this, { autoAlpha: 0 });
+		gsap.to(this, { autoAlpha: 0, duration: 0.3, ease: "power1.inOut", });
 
 		// When Nav is closed, enableScroll
 		enableScroll();

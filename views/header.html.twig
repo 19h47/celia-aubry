@@ -32,7 +32,9 @@
 						<button
 							type="button"
 							class="{{ html_classes(
-								'px-6 py-9 flex gap-1 items-center relative after:bottom-0 after:mx-6 after:inset-x-0 after:bg-neutral-900 after:absolute after:h-px after:opacity-0 after:transition-opacity after:duration-300 after:ease-in-out hover:after:opacity-100',
+								'px-6 py-9 flex gap-1 items-center relative',
+								'after:bottom-0 after:mx-6 after:inset-x-0 after:bg-neutral-900 after:absolute after:h-px after:scale-x-0 after:origin-right after:transition-transform after:duration-300 after:ease-in-out',
+								'hover:after:scale-x-100 hover:after:origin-left',
 								item.classes | join( ' ' ),
 							) }}"
 						>
@@ -41,13 +43,14 @@
 						</button>
 
 						{%- if item.children -%}
-							<ul class="absolute hidden group-hover:flex gap-6 top-full justify-center inset-x-0 bg-white border-b border-neutral-50">
+							<ul class="absolute flex opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto duration-300 ease-in-out transition-opacity gap-6 top-full justify-center inset-x-0 bg-white border-b border-neutral-50">
 								{%- for child in item.children -%}
 									<li>
 										<a
 											href="{{ child.url }}"
 											class="{{ html_classes(
-												'px-6 py-[2.375rem] relative after:bottom-0 after:mx-6 after:inset-x-0 after:bg-neutral-900 after:absolute after:h-px after:opacity-0 after:transition-opacity after:duration-300 after:ease-in-out hover:after:opacity-100',
+												'px-6 py-[2.375rem] relative after:bottom-0 after:mx-6 after:inset-x-0 after:bg-neutral-900 after:absolute after:h-px after:origin-right after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out',
+												'hover:after:scale-x-100 hover:after:origin-left',
 												child.master_object.meta( 'icon' ) ? 'flex gap-2' : 'block',
 												child.classes | join( ' ' ),
 											) }}"
@@ -67,7 +70,9 @@
 						<a
 							href="{{ item.url }}"
 							class="{{ html_classes(
-								'px-6 py-9 block relative after:bottom-0 after:mx-6 after:inset-x-0 after:bg-neutral-900 after:absolute after:h-px after:opacity-0 after:transition-opacity after:duration-300 after:ease-in-out hover:after:opacity-100',
+								'px-6 py-9 block relative',
+								'after:bottom-0 after:mx-6 after:inset-x-0 after:bg-neutral-900 after:absolute after:h-px after:scale-x-0 after:origin-right after:transition-transform after:duration-300 after:ease-in-out',
+								'hover:after:scale-100 hover:after:origin-left',
 								item.classes | join( ' ' ),
 							) }}"
 							itemprop="url"
@@ -83,7 +88,7 @@
 </c-header>
 
 <c-nav class="fixed text-medium bg-white inset-0 size-full z-1 flex pt-20 flex-col text-center" style="opacity: 0; visibility: hidden;">
-	<div class="container flex flex-grow list-none overflow-auto">
+	<div class="container flex flex-grow list-none overflow-auto scrollbar-hide">
 
 		<c-accordion
 			class="space-y-12 m-auto py-10"
@@ -109,7 +114,7 @@
 						</button>
 
 						{%- if item.children -%}
-							<div id="{{ item.slug }}" role="region">
+							<div id="{{ item.slug }}" role="region" class="duration-300 ease-linear transition-[max-height]">
 								<ul class="space-y-6 pt-6 js-accordion-inner">
 									{%- for child in item.children -%}
 										<li>

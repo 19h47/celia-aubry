@@ -1,0 +1,18 @@
+{#
+ # Filters Case Study
+ #}
+
+<p class="h3">{{ __( 'Filter by expertise', 'celia-aubry' ) }}</p>
+
+<div class="mt-4 text-regular flex gap-x-6 gap-y-4 flex-wrap">
+
+	<button type="button" data-filter class="is-active link [&.is-active]:text-brand-jaune [&.is-active]:font-bold">
+		{{- __( 'All case studies', 'celia-aubry' ) -}}
+	</button>
+
+	{% for cat in get_terms({ taxonomy: 'case_study_cat' }) %}
+		<button class="[&.is-active]:text-brand-jaune [&.is-active]:font-bold link" type="button" data-filter data-taxonomy="{{ cat.taxonomy }}" value="{{ cat.term_id }}">
+			{{ cat.name }}
+		</button>
+	{% endfor %}
+</div>

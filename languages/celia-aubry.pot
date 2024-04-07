@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Célia Aubry\n"
-"POT-Creation-Date: 2024-04-07 11:21+0200\n"
+"POT-Creation-Date: 2024-04-07 18:28+0200\n"
 "PO-Revision-Date: 2024-03-31 18:10+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -329,7 +329,7 @@ msgid "Contact"
 msgstr ""
 
 #: includes/Plugins/ACF/IncludeFields/ContactPageFields.php:79
-#: includes/Setup/Settings.php:48
+#: includes/Setup/Settings.php:104
 msgid "Email"
 msgstr ""
 
@@ -620,19 +620,27 @@ msgstr ""
 msgid "Legals Menu"
 msgstr ""
 
-#: includes/Setup/Settings.php:42
+#: includes/Setup/Settings.php:74
+msgid "Case Study Base"
+msgstr ""
+
+#: includes/Setup/Settings.php:86
+msgid "Case Study Cat Base"
+msgstr ""
+
+#: includes/Setup/Settings.php:98
 msgid "Public Email Address"
 msgstr ""
 
-#: includes/Setup/Settings.php:49
+#: includes/Setup/Settings.php:105
 msgid "This email address is used for public purposes."
 msgstr ""
 
-#: includes/Setup/Settings.php:56 includes/Setup/Settings.php:65
+#: includes/Setup/Settings.php:112 includes/Setup/Settings.php:121
 msgid "Author Description"
 msgstr ""
 
-#: includes/Setup/Settings.php:71 includes/Template/PostStates.php:41
+#: includes/Setup/Settings.php:127 includes/Template/PostStates.php:41
 msgid "Contact Page"
 msgstr ""
 

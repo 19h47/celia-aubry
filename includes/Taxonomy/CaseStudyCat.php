@@ -58,8 +58,14 @@ class CaseStudyCat {
 			'back_to_items'              => __( '&larr; Back to Categories', 'celia-aubry' ),
 		);
 
+		$rewrite = array(
+			'slug'       => get_option( 'case_study_cat_base' ),
+			'with_front' => true,
+		);
+
 		$args = array(
 			'labels'             => $labels,
+			'rewrite'            => $rewrite,
 			'hierarchical'       => true,
 			'public'             => true,
 			'publicly_queryable' => true,

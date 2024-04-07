@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Célia Aubry\n"
-"POT-Creation-Date: 2024-04-05 12:02+0200\n"
-"PO-Revision-Date: 2024-04-05 12:10+0200\n"
+"POT-Creation-Date: 2024-04-07 18:28+0200\n"
+"PO-Revision-Date: 2024-04-07 18:28+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -55,6 +55,10 @@ msgstr "Galerie"
 #: includes/Plugins/ACF/IncludeFields/BlocksFields.php:472
 #: includes/Plugins/ACF/IncludeFields/BlocksFields.php:519
 #: includes/Plugins/ACF/IncludeFields/BlocksFields.php:522
+#: includes/Plugins/ACF/IncludeFields/ContactPageFields.php:54
+#: includes/Plugins/ACF/IncludeFields/ContactPageFields.php:57
+#: includes/Plugins/ACF/IncludeFields/FrontPageFields.php:53
+#: includes/Plugins/ACF/IncludeFields/FrontPageFields.php:57
 msgid "Title"
 msgstr "Titre"
 
@@ -74,6 +78,10 @@ msgstr "Indiquez le titre du bloc. (Optionnel)"
 #: includes/Plugins/ACF/IncludeFields/BlocksFields.php:444
 #: includes/Plugins/ACF/IncludeFields/BlocksFields.php:544
 #: includes/Plugins/ACF/IncludeFields/BlocksFields.php:548
+#: includes/Plugins/ACF/IncludeFields/ContactPageFields.php:61
+#: includes/Plugins/ACF/IncludeFields/ContactPageFields.php:65
+#: includes/Plugins/ACF/IncludeFields/FrontPageFields.php:62
+#: includes/Plugins/ACF/IncludeFields/FrontPageFields.php:66
 msgid "Content"
 msgstr "Contenu"
 
@@ -190,7 +198,7 @@ msgid "Case Studies List"
 msgstr "Liste des projets"
 
 #: includes/Plugins/ACF/IncludeFields/BlocksFields.php:317
-#: views/pages/archive-case-study.html.twig:16
+#: views/pages/archive-case-study.html.twig:19
 #: views/pages/archive-case-study.html.twig:43
 msgid "Case Studies"
 msgstr "Projets"
@@ -297,6 +305,8 @@ msgstr "Description"
 
 #: includes/Plugins/ACF/IncludeFields/CaseStudyFields.php:53
 #: includes/Plugins/ACF/IncludeFields/CaseStudyFields.php:56
+#: includes/Plugins/ACF/IncludeFields/FrontPageFields.php:71
+#: includes/Plugins/ACF/IncludeFields/FrontPageFields.php:74
 msgid "Date"
 msgstr "Date"
 
@@ -307,6 +317,33 @@ msgstr "Indiquez le lien du projet. (Optionnel)"
 #: includes/Plugins/ACF/IncludeFields/CaseStudyFields.php:71
 msgid "Case Study Fields"
 msgstr "Champs du projet"
+
+#: includes/Plugins/ACF/IncludeFields/ContactPageFields.php:46
+#: includes/Plugins/ACF/IncludeFields/FrontPageFields.php:46
+msgid "Hero"
+msgstr "Hero"
+
+#: includes/Plugins/ACF/IncludeFields/ContactPageFields.php:70
+#: includes/Plugins/ACF/IncludeFields/ContactPageFields.php:74
+msgid "Contact"
+msgstr "Contact"
+
+#: includes/Plugins/ACF/IncludeFields/ContactPageFields.php:79
+#: includes/Setup/Settings.php:104
+msgid "Email"
+msgstr "Email"
+
+#: includes/Plugins/ACF/IncludeFields/ContactPageFields.php:82
+msgid "artvandelay@vandelayindustries.com"
+msgstr "artvandelay@vandelayindustries.com"
+
+#: includes/Plugins/ACF/IncludeFields/ContactPageFields.php:91
+msgid "Contact Page Fields"
+msgstr "Champs de la page contact"
+
+#: includes/Plugins/ACF/IncludeFields/FrontPageFields.php:83
+msgid "Front Page Fields"
+msgstr "Champs de la page d’accueil"
 
 #. translators: Publish box date format, see https://secure.php.net/date
 #: includes/Post/CaseStudy.php:45
@@ -527,7 +564,7 @@ msgstr "Facebook"
 msgid "Share on Facebook"
 msgstr "Partager sur Facebook"
 
-#: includes/Setup/Context.php:66 includes/Setup/Settings.php:63
+#: includes/Setup/Context.php:66
 msgid "Instagram"
 msgstr "Instagram"
 
@@ -543,7 +580,7 @@ msgstr "Partager sur Twitter"
 msgid "Share on Twitter"
 msgstr "Partager sur Twitter"
 
-#: includes/Setup/Context.php:85 includes/Setup/Settings.php:49
+#: includes/Setup/Context.php:85
 msgid "LinkedIn"
 msgstr "LinkedIn"
 
@@ -583,15 +620,27 @@ msgstr "Menu du pied de page"
 msgid "Legals Menu"
 msgstr "Menu des mentions légales"
 
-#: includes/Setup/Settings.php:57
-msgid "Enter the LinkedIn URL here."
-msgstr "Indiquer l’URL du compte LinkedIn."
+#: includes/Setup/Settings.php:74
+msgid "Case Study Base"
+msgstr "Préfixe des projets"
 
-#: includes/Setup/Settings.php:71
-msgid "Enter the Instagram URL here."
-msgstr "Indiquer l’URL du compte Instagram."
+#: includes/Setup/Settings.php:86
+msgid "Case Study Cat Base"
+msgstr "Préfixe des catégories de projet"
 
-#: includes/Setup/Settings.php:77 includes/Template/PostStates.php:41
+#: includes/Setup/Settings.php:98
+msgid "Public Email Address"
+msgstr "Adresse email publique"
+
+#: includes/Setup/Settings.php:105
+msgid "This email address is used for public purposes."
+msgstr "Cette adresse e-mail est utilisée à des fins publiques."
+
+#: includes/Setup/Settings.php:112 includes/Setup/Settings.php:121
+msgid "Author Description"
+msgstr "Description de l'auteur"
+
+#: includes/Setup/Settings.php:127 includes/Template/PostStates.php:41
 msgid "Contact Page"
 msgstr "Page de contact"
 
@@ -777,7 +826,7 @@ msgstr "Aucun projet à afficher"
 msgid "See all case studies"
 msgstr "Voir tous les projets"
 
-#: views/blocks/case-study-categories.html.twig:20
+#: views/blocks/case-study-categories.html.twig:21
 #, php-format
 msgid "Discover %s expertise"
 msgstr "Découvrir l’expertise %s"
@@ -801,10 +850,12 @@ msgid "Menu"
 msgstr "Menu"
 
 #: views/pages/archive-case-study.html.twig:23
+#: views/pages/archive-case-study.html.twig:59
 msgid "Filter by expertise"
 msgstr "Filtrer par expertise"
 
 #: views/pages/archive-case-study.html.twig:28
+#: views/pages/archive-case-study.html.twig:64
 msgid "All case studies"
 msgstr "Tous les projets"
 
@@ -839,6 +890,12 @@ msgstr "Jérémy Levron"
 #. Author URI of the plugin/theme
 msgid "https://19h47.fr/"
 msgstr "https://19h47.fr/"
+
+#~ msgid "Enter the LinkedIn URL here."
+#~ msgstr "Indiquer l’URL du compte LinkedIn."
+
+#~ msgid "Enter the Instagram URL here."
+#~ msgstr "Indiquer l’URL du compte Instagram."
 
 #~ msgid "Spotlight"
 #~ msgstr "Spotlight"
