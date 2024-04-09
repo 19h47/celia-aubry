@@ -36,7 +36,9 @@
 						{{ item.is_target_blank or item.is_external ? " target=\"#{item.target}\" rel=\"noopener noreferer\"" }}
 					>
 						{{- item.title -}}
-						{{- icon( 'arrow-up-right', { classes: [ 'shrink-0 size-6' ] } ) -}}
+						<span class="shrink-0 overflow-hidden">
+							{{- icon( 'arrow-up-right', { classes: [ 'size-6 arrow' ] } ) -}}
+						</span>
 					</a>
 				</li>
 			{% endfor %}

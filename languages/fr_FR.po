@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Célia Aubry\n"
 "POT-Creation-Date: 2024-04-07 18:28+0200\n"
-"PO-Revision-Date: 2024-04-07 18:28+0200\n"
+"PO-Revision-Date: 2024-04-08 21:33+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -839,7 +839,7 @@ msgstr ""
 
 #: views/footer.html.twig:13
 msgid "We work together?"
-msgstr "On travaille ensemble ?"
+msgstr "On travaille ensemble&nbsp;?"
 
 #: views/footer.html.twig:14
 msgid "Contact me"

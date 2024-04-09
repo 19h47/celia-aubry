@@ -9,7 +9,7 @@
 	{% set tags = post.terms({ taxonomy: 'case_study_tag' }) %}
 	{% set date = post.meta( 'date' ) %}
 
-	<a href="{{ post.link }}" class="hover:bg-white hover:text-neutral-900 transition-colors duration-300 ease-in-out block py-2.5 py-[1.125rem]">
+	<a href="{{ post.link }}" class="hover:bg-brand-beige hover:text-neutral-900 transition-colors duration-300 ease-in-out block py-2.5 xl:py-[1.125rem]">
 		<div class="container grid grid-cols-12 items-center gap-4">
 			<div class="col-span-12 xl:col-span-8">
 				<div class="h4">
@@ -20,11 +20,13 @@
 					<p class="text-medium mt-2 xl:mt-1">{{- date -}}</p>
 				{%- endif -%}
 			</div>
-			<div class="col-span-10 mt-4 xl:mt-0 xl:col-span-3 text-medium">
+			<div class="col-span-10 xl:col-span-3 text-medium">
 				{{ post.terms({ taxonomy: 'case_study_cat' }) | map( t => t.name ) | join( ' - ' ) }}
 			</div>
-			<div class="col-span-2 mt-4 xl:mt-0 text-medium flex justify-end xl:col-span-1">
-				{{ icon( 'arrow-up-right', { classes: [ 'size-8' ] } ) }}
+			<div class="col-span-2 text-medium flex justify-end xl:col-span-1">
+				<span class="overflow-hidden">
+					{{ icon( 'arrow-up-right', { classes: [ 'arrow size-8' ] } ) }}
+				</span>
 			</div>
 		</div>
 	</a>

@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Célia Aubry\n"
-"POT-Creation-Date: 2024-04-07 18:28+0200\n"
+"POT-Creation-Date: 2024-04-08 21:32+0200\n"
 "PO-Revision-Date: 2024-03-31 18:10+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -72,7 +72,6 @@ msgstr ""
 #: includes/Plugins/ACF/IncludeFields/BlocksFields.php:180
 #: includes/Plugins/ACF/IncludeFields/BlocksFields.php:203
 #: includes/Plugins/ACF/IncludeFields/BlocksFields.php:358
-#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:363
 #: includes/Plugins/ACF/IncludeFields/BlocksFields.php:410
 #: includes/Plugins/ACF/IncludeFields/BlocksFields.php:414
 #: includes/Plugins/ACF/IncludeFields/BlocksFields.php:444
@@ -199,7 +198,7 @@ msgstr ""
 
 #: includes/Plugins/ACF/IncludeFields/BlocksFields.php:317
 #: views/pages/archive-case-study.html.twig:19
-#: views/pages/archive-case-study.html.twig:43
+#: views/pages/archive-case-study.html.twig:30
 msgid "Case Studies"
 msgstr ""
 
@@ -278,23 +277,7 @@ msgstr ""
 msgid "Icon"
 msgstr ""
 
-#: includes/Plugins/ACF/IncludeFields/CaseStudyCatFields.php:59
-msgid "Branding"
-msgstr ""
-
-#: includes/Plugins/ACF/IncludeFields/CaseStudyCatFields.php:60
-msgid "DA . UX/UI"
-msgstr ""
-
-#: includes/Plugins/ACF/IncludeFields/CaseStudyCatFields.php:61
-msgid "Illustration"
-msgstr ""
-
-#: includes/Plugins/ACF/IncludeFields/CaseStudyCatFields.php:62
-msgid "Product design"
-msgstr ""
-
-#: includes/Plugins/ACF/IncludeFields/CaseStudyCatFields.php:72
+#: includes/Plugins/ACF/IncludeFields/CaseStudyCatFields.php:66
 msgid "Case Study Cat Fields"
 msgstr ""
 
@@ -833,6 +816,14 @@ msgstr ""
 msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr ""
 
+#: views/components/filters-case-study.html.twig:5
+msgid "Filter by expertise"
+msgstr ""
+
+#: views/components/filters-case-study.html.twig:10
+msgid "All case studies"
+msgstr ""
+
 #: views/footer.html.twig:13
 msgid "We work together?"
 msgstr ""
@@ -845,17 +836,7 @@ msgstr ""
 msgid "Menu"
 msgstr ""
 
-#: views/pages/archive-case-study.html.twig:23
-#: views/pages/archive-case-study.html.twig:59
-msgid "Filter by expertise"
-msgstr ""
-
-#: views/pages/archive-case-study.html.twig:28
-#: views/pages/archive-case-study.html.twig:64
-msgid "All case studies"
-msgstr ""
-
-#: views/pages/archive-case-study.html.twig:47
+#: views/pages/archive-case-study.html.twig:34
 msgid "Expertise"
 msgstr ""
 

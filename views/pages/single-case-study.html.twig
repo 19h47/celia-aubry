@@ -27,7 +27,7 @@
 							{{- description or date ? '&nbsp;&sol;&nbsp;' : '' -}}
 							{%- for cat in cats -%}
 								<span class="inline-flex gap-2 items-center">
-									<img src="{{ asset( 'src/img/svg/' ~ cat.meta( 'icon' ) ~ '.svg' ) }}" alt="" width="20" height="20">
+									<img src="{{ get_image( cat.meta( 'icon' ) ).src }}" alt="{{ cat.name }}" width="20" height="20">
 									{{- cat.name -}}
 								</span>
 								{{- loop.last ? '' : '&nbsp;&sol;&nbsp;' -}}

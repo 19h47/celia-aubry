@@ -19,7 +19,7 @@
 				</div>
 
 				<div class="col-span-4 justify-center hidden xl:flex">
-					<img class="block" src="{{ asset( 'src/img/svg/' ~ term.meta( 'icon' ) ~ '.svg' ) }}" alt="" width="170" height="170">
+					<img class="block" src="{{ get_image( term.meta( 'icon' ) ).src }}" alt="{{ term.name }}" width="170" height="170">
 				</div>
 			</div>
 		</div>

@@ -17,10 +17,10 @@
 
 	<picture{{ size ? " data-size=\"#{ size }\"" : '' }} data-mime-type="{{ image.post_mime_type }}">
 
-		{% if 'image/svg+xml' != image.post_mime_type and 'image/gif' != image.post_mime_type %}
+		{# {% if 'image/svg+xml' != image.post_mime_type and 'image/gif' != image.post_mime_type %}
 			<source type="image/webp" srcset="{{ image.src( size ) | towebp( 100 ) }}">
 			<source type="{{ image.post_mime_type }}" srcset="{{ image.src( size ) }}">
-		{% endif %}
+		{% endif %} #}
 
 		<img
 			class="{{ html_classes( '', classes | default( [] ) | join( ' ' ) ) }}"

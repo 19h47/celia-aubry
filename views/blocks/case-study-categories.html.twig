@@ -2,7 +2,7 @@
  # Blocks: Case Study Categories
  #}
 
-<div class="py-10 xl:py-20 space-y-6 xl:space-y-10">
+<div class="{{ html_classes( loop.last ? 'pt-10 xl:pt-20' : 'py-10 xl:py-20', 'space-y-6 xl:space-y-10' ) }}">
 	{%- if block.title -%}
 		<div class="container">
 			<h2 class="h3">{{- block.title -}}</h2>

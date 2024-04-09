@@ -1,6 +1,7 @@
 @import "tailwindcss/base";
 
 @import "tailwindcss/components";
+@import "components/arrow.css";
 @import "components/breadcrumb.css";
 @import "components/button.css";
 @import "components/link.css";

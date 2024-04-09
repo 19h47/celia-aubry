@@ -54,15 +54,9 @@ class CaseStudyCatFields {
 				'key'           => 'field_' . $key . '_icon',
 				'label'         => __( 'Icon', 'celia-aubry' ),
 				'name'          => 'icon',
-				'type'          => 'select',
-				'choices'       => array(
-					'branding'      => __( 'Branding', 'celia-aubry' ),
-					'dauxui'        => __( 'DA . UX/UI', 'celia-aubry' ),
-					'illustration'  => __( 'Illustration', 'celia-aubry' ),
-					'productdesign' => __( 'Product design', 'celia-aubry' ),
-				),
-				'default_value' => 'branding',
-				'return_format' => 'value',
+				'type'          => 'image',
+				'return_format' => 'id',
+				'library'       => 'all',
 			),
 		);
 

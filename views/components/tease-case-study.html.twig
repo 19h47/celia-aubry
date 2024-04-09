@@ -4,7 +4,7 @@
 
 {% set tags = post.terms({ taxonomy: 'case_study_tag' }) %}
 
-<a class="space-y-6" href="{{ post.link }}">
+<a class="space-y-6 block" href="{{ post.link }}">
 	{%- if post.thumbnail -%}
 		{{- include( 'components/image.html.twig', { image: post.thumbnail, classes: [ 'aspect-video rounded-[1.25rem]' ] } ) -}}
 	{%- else -%}
@@ -17,6 +17,8 @@
 
 	<div class="mt-4 flex text-medium">
 		{{- post.meta( 'date' ) -}}
-		{{ icon( 'arrow-up-right', { classes: [ 'ml-auto size-8' ] } ) }}
+		<span class="ml-auto overflow-hidden">
+			{{- icon( 'arrow-up-right', { classes: [ 'arrow size-8' ] } ) -}}
+		</span>
 	</div>
 </a>

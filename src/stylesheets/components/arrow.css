@@ -1,0 +1,26 @@
+@layer components {
+	@keyframes arrow-out {
+		from {
+			transform: translate3d(0,0,0);
+		}
+		to {
+			transform: translate3d(100%,-100%,0);
+		}
+	}
+
+	@keyframes arrow-in {
+		from {
+			transform: translate3d(-100%,100%,0);
+		}
+		to {
+			transform: translate3d(0,0,0);
+		}
+	}
+
+	a:hover .arrow {
+		animation-name: arrow-out, arrow-in;
+		animation-duration: 0.3s, 0.3s;
+		animation-timing-function: theme(transitionTimingFunction[in-out]);
+		animation-delay: 0s, 0.3s;
+	}
+}

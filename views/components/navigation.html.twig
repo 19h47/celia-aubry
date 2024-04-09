@@ -30,7 +30,9 @@
 					) }}"
 				>
 					{{- next.title -}}
-					{{- icon( 'arrow-up-right', { classes: [ 'shrink-0 size-6' ] } ) -}}
+					<span class="shrink-0 overflow-hidden">
+						{{- icon( 'arrow-up-right', { classes: [ 'arrow size-6' ] } ) -}}
+					</span>
 				</a>
 			{%- endif -%}
 		</div>

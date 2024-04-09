@@ -27,7 +27,7 @@
 					<ul class="space-y-2 mt-2 xl:mt-4">
 						{% for cat in get_terms( { taxonomy: 'case_study_cat', hide_empty: false } ) %}
 							<li class="flex gap-2">
-								<img src="{{ asset( 'src/img/svg/' ~ cat.meta( 'icon' ) ~ '.svg' ) }}" alt="" width="20" height="20">
+								<img src="{{ get_image( cat.meta( 'icon' ) ).src }}" alt="{{ cat.name }}" width="20" height="20">
 								{{- cat.name -}}
 							</li>
 						{% endfor %}
