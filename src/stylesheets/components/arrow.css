@@ -1,5 +1,5 @@
 @layer components {
-	@keyframes arrow-out {
+	@keyframes arrow-up-right-out {
 		from {
 			transform: translate3d(0,0,0);
 		}
@@ -8,7 +8,7 @@
 		}
 	}
 
-	@keyframes arrow-in {
+	@keyframes arrow-up-right-in {
 		from {
 			transform: translate3d(-100%,100%,0);
 		}
@@ -17,8 +17,33 @@
 		}
 	}
 
-	a:hover .arrow {
-		animation-name: arrow-out, arrow-in;
+	a:hover .arrow-up-right {
+		animation-name: arrow-up-right-out, arrow-up-right-in;
+		animation-duration: 0.3s, 0.3s;
+		animation-timing-function: theme(transitionTimingFunction[in-out]);
+		animation-delay: 0s, 0.3s;
+	}
+
+	@keyframes arrow-up-left-out {
+		from {
+			transform: translate3d(0,0,0);
+		}
+		to {
+			transform: translate3d(-100%,-100%,0);
+		}
+	}
+
+	@keyframes arrow-up-left-in {
+		from {
+			transform: translate3d(100%,100%,0);
+		}
+		to {
+			transform: translate3d(0,0,0);
+		}
+	}
+
+	a:hover .arrow-up-left {
+		animation-name: arrow-up-left-out, arrow-up-left-in;
 		animation-duration: 0.3s, 0.3s;
 		animation-timing-function: theme(transitionTimingFunction[in-out]);
 		animation-delay: 0s, 0.3s;

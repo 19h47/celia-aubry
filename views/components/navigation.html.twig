@@ -17,7 +17,9 @@
 						'inline-flex gap-4 items-center w-min xl:w-auto xl:transition-colors xl:ease-in-out xl:duration-300 xl:hover:text-neutral-900',
 					) }}"
 				>
-					{{- icon( 'arrow-up-left', { classes: [ 'shrink-0 size-6' ] } ) -}}
+					<span class="shrink-0 overflow-hidden">
+						{{- icon( 'arrow-up-left', { classes: [ 'size-6' ] } ) -}}
+					</span>
 					{{- previous.title -}}
 				</a>
 			{%- endif -%}
@@ -31,7 +33,7 @@
 				>
 					{{- next.title -}}
 					<span class="shrink-0 overflow-hidden">
-						{{- icon( 'arrow-up-right', { classes: [ 'arrow size-6' ] } ) -}}
+						{{- icon( 'arrow-up-right', { classes: [ 'size-6' ] } ) -}}
 					</span>
 				</a>
 			{%- endif -%}
