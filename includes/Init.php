@@ -40,6 +40,7 @@ class Init {
 			Plugins\ACF\IncludeFields\CaseStudyFields::class,
 			Plugins\ACF\IncludeFields\ContactPageFields::class,
 			Plugins\ACF\IncludeFields\FrontPageFields::class,
+			Plugins\ACF\Input\AdminEnqueueScripts::class,
 			Vite::class,
 		);
 	}

@@ -48,4 +48,29 @@
 		animation-timing-function: theme(transitionTimingFunction[in-out]);
 		animation-delay: 0s, 0.3s;
 	}
+
+	@keyframes arrow-down-out {
+		from {
+			transform: translate3d(0,0,0);
+		}
+		to {
+			transform: translate3d(0,100%,0);
+		}
+	}
+
+	@keyframes arrow-down-in {
+		from {
+			transform: translate3d(0,-100%,0);
+		}
+		to {
+			transform: translate3d(0,0,0);
+		}
+	}
+
+	a:hover .arrow-down, button:hover .arrow-down {
+		animation-name: arrow-down-out, arrow-down-in;
+		animation-duration: 0.3s, 0.3s;
+		animation-timing-function: theme(transitionTimingFunction[in-out]);
+		animation-delay: 0s, 0.3s;
+	}
 }

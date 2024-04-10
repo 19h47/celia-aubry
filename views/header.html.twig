@@ -40,7 +40,7 @@
 							) }}"
 						>
 							{{- item.title -}}
-							{{ icon( 'arrow-down', { classes: [ 'size-2.5' ] } ) }}
+							<span class="overflow-hidden">{{- icon( 'arrow-down', { classes: [ 'size-2.5' ] } ) -}}</span>
 						</button>
 
 						{%- if item.children -%}
@@ -113,7 +113,7 @@
 							aria-controls="{{ item.slug }}"
 						>
 							{{- item.title -}}
-							{{ icon( 'arrow-down', { classes: [ 'size-2.5' ] } ) }}
+							<span class="overflow-hidden">{{- icon( 'arrow-down', { classes: [ 'size-2.5' ] } ) -}}</span>
 						</button>
 
 						{%- if item.children -%}

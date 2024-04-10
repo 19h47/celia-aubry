@@ -2,16 +2,22 @@
  # Blocks: Image & Content
  #}
 
-<div class="{{ html_classes( 'py-10 xl:py-20' ) }}">
-	<div class="container xl:grid xl:grid-cols-3 xl:gap-4">
-		<div class="xl:col-span-1 space-y-6">
-			{{- include( 'components/image.html.twig', { image: block.image, classes: [ 'rounded-[1.25rem] aspect-screen object-cover' ] } ) -}}
-		</div>
-		<div class="xl:col-span-2 space-y-6 xl:space-y-4 mt-6 xl:mt-0">
-			<div class="xl:ml-12 xl:sticky xl:top-28 xl:inset-x-0">
-				<h2 class="h2">{{- block.title -}}</h2>
-				<div class="wysiwyg">{{- block.content -}}</div>
-			</div>
+{%- if block.content or block.image -%}
+	<div class="{{ html_classes( 'py-10 xl:py-20' ) }}">
+		<div class="container xl:grid xl:grid-cols-3 xl:gap-4">
+			{%- if block.image -%}
+				<div class="xl:col-span-1 space-y-6">
+					{{- include( 'components/image.html.twig', { image: block.image, classes: [ 'rounded-[1.25rem] aspect-screen object-cover' ] } ) -}}
+				</div>
+			{%- endif -%}
+
+			{%- if block.content -%}
+				<div class="{{ html_classes( 'xl:col-span-2 space-y-6 xl:space-y-4', block.image ? 'mt-6 xl:mt-0' : 'xl:col-start-2' ) }}">
+					<div class="xl:ml-12 xl:sticky xl:top-28 xl:inset-x-0">
+						<div class="wysiwyg">{{- block.content -}}</div>
+					</div>
+				</div>
+			{%- endif -%}
 		</div>
 	</div>
-</div>
+{%- endif -%}

@@ -8,7 +8,10 @@ export class Nav extends Piece {
 	}
 
 	toggle() {
-		console.log("Nav.toggle()", this.value);
+		if (this.log) {
+			console.log("Nav.toggle()", this.value);
+		}
+
 		this.value = !JSON.parse(this.value);
 	}
 
@@ -45,7 +48,9 @@ export class Nav extends Piece {
 	}
 
 	attributeChangedCallback(name, oldValue, newValue) {
-		console.log(`Attribute ${name} has changed. From ${oldValue} to ${newValue}`);
+		if (this.log) {
+			console.log(`Attribute ${name} has been changed. From ${oldValue} to ${newValue}`);
+		}
 
 		if (JSON.parse(newValue) === false) {
 			return this.close();

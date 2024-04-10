@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Célia Aubry\n"
-"POT-Creation-Date: 2024-04-07 18:28+0200\n"
-"PO-Revision-Date: 2024-04-08 21:33+0200\n"
+"POT-Creation-Date: 2024-04-10 09:11+0200\n"
+"PO-Revision-Date: 2024-04-10 09:11+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -35,26 +35,26 @@ msgstr "Galerie"
 #: includes/Plugins/ACF/IncludeFields/BlocksFields.php:83
 #: includes/Plugins/ACF/IncludeFields/BlocksFields.php:125
 #: includes/Plugins/ACF/IncludeFields/BlocksFields.php:128
-#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:196
-#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:199
-#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:282
-#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:285
-#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:310
-#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:313
-#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:334
-#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:337
-#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:349
-#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:353
-#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:379
-#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:382
-#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:394
-#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:397
-#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:437
-#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:440
-#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:469
-#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:472
-#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:519
-#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:522
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:201
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:204
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:288
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:291
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:316
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:319
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:340
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:343
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:355
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:359
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:385
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:388
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:400
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:403
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:443
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:446
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:475
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:478
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:525
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:528
 #: includes/Plugins/ACF/IncludeFields/ContactPageFields.php:54
 #: includes/Plugins/ACF/IncludeFields/ContactPageFields.php:57
 #: includes/Plugins/ACF/IncludeFields/FrontPageFields.php:53
@@ -69,15 +69,14 @@ msgstr "Indiquez le titre du bloc. (Optionnel)"
 
 #: includes/Plugins/ACF/IncludeFields/BlocksFields.php:87
 #: includes/Plugins/ACF/IncludeFields/BlocksFields.php:133
-#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:180
-#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:203
-#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:358
-#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:363
-#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:410
-#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:414
-#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:444
-#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:544
-#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:548
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:183
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:208
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:364
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:416
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:420
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:450
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:551
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:555
 #: includes/Plugins/ACF/IncludeFields/ContactPageFields.php:61
 #: includes/Plugins/ACF/IncludeFields/ContactPageFields.php:65
 #: includes/Plugins/ACF/IncludeFields/FrontPageFields.php:62
@@ -87,11 +86,12 @@ msgstr "Contenu"
 
 #: includes/Plugins/ACF/IncludeFields/BlocksFields.php:88
 #: includes/Plugins/ACF/IncludeFields/BlocksFields.php:139
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:189
 msgid "Indicate the content of the block. (Optional)"
 msgstr "Indiquez le contenu du bloc. (Optionnel)"
 
 #: includes/Plugins/ACF/IncludeFields/BlocksFields.php:97
-#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:211
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:217
 msgid "Images"
 msgstr "Images"
 
@@ -120,7 +120,7 @@ msgid "Title, Content & link"
 msgstr "Titre, contenu et lien"
 
 #: includes/Plugins/ACF/IncludeFields/BlocksFields.php:143
-#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:422
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:428
 #: includes/Plugins/ACF/IncludeFields/CaseStudyFields.php:60
 msgid "Link"
 msgstr "Lien"
@@ -134,138 +134,147 @@ msgid "Image & Content"
 msgstr "Image et contenu"
 
 #: includes/Plugins/ACF/IncludeFields/BlocksFields.php:172
-#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:222
-#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:227
-#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:453
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:228
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:233
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:459
 msgid "Image"
 msgstr "Image"
 
-#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:191
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:177
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:213
+msgid "Indicate the image of the block. (Optional)"
+msgstr "Indiquez l’image du bloc. (Optionnel)"
+
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:196
 msgid "Title, Content & Images"
 msgstr "Titre, contenu et images"
 
-#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:236
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:242
 msgid "Aspect Ratio"
 msgstr "Ratio d'aspect"
 
-#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:239
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:245
 msgid "Aspect ratio of the image. (Default auto)"
 msgstr "Ratio d’aspect de l’image. (Optionnel)"
 
-#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:241
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:247
 msgid "Auto"
 msgstr "Automatique"
 
-#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:242
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:248
 msgid "1 / 1"
 msgstr "1 / 1"
 
-#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:243
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:249
 msgid "2 / 1"
 msgstr "2 / 1"
 
-#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:244
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:250
 msgid "16 / 9"
 msgstr "16 / 9"
 
-#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:254
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:260
 msgid "Margins"
 msgstr "Marges"
 
-#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:260
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:266
 msgid "Does the block have margins?"
 msgstr "Le bloc a-t-il des marges ?"
 
-#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:264
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:270
 msgid "Full Width"
 msgstr "Pleine largeur"
 
-#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:270
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:276
 msgid "Is the image full width?"
 msgstr "L’image est-elle pleine largeur ?"
 
-#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:277
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:283
 msgid "Case Studies Grid"
 msgstr "Grille des projets"
 
-#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:289
-#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:476
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:295
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:482
 msgid "Categories"
 msgstr "Catégories"
 
-#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:305
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:311
 msgid "Case Studies List"
 msgstr "Liste des projets"
 
-#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:317
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:323
 #: views/pages/archive-case-study.html.twig:19
-#: views/pages/archive-case-study.html.twig:43
+#: views/pages/archive-case-study.html.twig:30
 msgid "Case Studies"
 msgstr "Projets"
 
-#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:329
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:335
 msgid "Timeline"
 msgstr "Chronologie"
 
-#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:341
-#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:386
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:347
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:392
 msgid "Items"
 msgstr "Items"
 
-#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:345
-#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:390
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:351
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:396
 msgid "Add Item"
 msgstr "Ajouter un item"
 
-#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:374
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:380
 msgid "Testimonials"
 msgstr "Témoignages"
 
-#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:402
-#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:405
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:408
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:411
 msgid "Position"
 msgstr "Poste"
 
-#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:432
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:438
 msgid "Read More"
 msgstr "En savoir plus"
 
-#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:464
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:470
 msgid "Case Study Categories"
 msgstr "Catégories de projet"
 
-#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:480
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:486
 msgid "Add Category"
 msgstr "Ajouter une catégorie"
 
-#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:484
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:490
 msgid "Category"
 msgstr "Catégorie"
 
-#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:498
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:504
 #: includes/Post/CaseStudy.php:163
 msgid "Case Study"
 msgstr "Projet"
 
-#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:514
-#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:526
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:520
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:532
 msgid "Key Figures"
 msgstr "Chiffres clés"
 
-#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:532
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:538
 msgid "Add Key Figure"
 msgstr "Ajouter un chiffre clés"
 
-#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:536
 #: includes/Plugins/ACF/IncludeFields/BlocksFields.php:539
+msgid "Indicate the key figures of the block. (Up to 3 maximum)"
+msgstr "Indiquez les chiffres clés du bloc. (Jusqu’à 3 maximum)"
+
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:543
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:546
 msgid "Key Figure"
 msgstr "Chiffre clé"
 
-#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:557
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:564
 msgid "Add Block"
 msgstr "Ajouter un bloc"
 
-#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:564
+#: includes/Plugins/ACF/IncludeFields/BlocksFields.php:571
 msgid "Blocks Fields"
 msgstr "Champs de blocs"
 
@@ -278,23 +287,7 @@ msgstr "Extrait"
 msgid "Icon"
 msgstr "Icône"
 
-#: includes/Plugins/ACF/IncludeFields/CaseStudyCatFields.php:59
-msgid "Branding"
-msgstr "Branding"
-
-#: includes/Plugins/ACF/IncludeFields/CaseStudyCatFields.php:60
-msgid "DA . UX/UI"
-msgstr "DA . UX/UI"
-
-#: includes/Plugins/ACF/IncludeFields/CaseStudyCatFields.php:61
-msgid "Illustration"
-msgstr "Illustration"
-
-#: includes/Plugins/ACF/IncludeFields/CaseStudyCatFields.php:62
-msgid "Product design"
-msgstr "Product design"
-
-#: includes/Plugins/ACF/IncludeFields/CaseStudyCatFields.php:72
+#: includes/Plugins/ACF/IncludeFields/CaseStudyCatFields.php:66
 msgid "Case Study Cat Fields"
 msgstr "Champs d’une catégorie de projet"
 
@@ -822,7 +815,7 @@ msgstr "Ressource Vite inconnue : "
 msgid "No case studies to display"
 msgstr "Aucun projet à afficher"
 
-#: views/blocks/case-studies-list.html.twig:25
+#: views/blocks/case-studies-list.html.twig:26
 msgid "See all case studies"
 msgstr "Voir tous les projets"
 
@@ -831,11 +824,19 @@ msgstr "Voir tous les projets"
 msgid "Discover %s expertise"
 msgstr "Découvrir l’expertise %s"
 
-#: views/components/collection-case-study.html.twig:32
+#: views/components/collection-case-study.html.twig:34
 msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr ""
 "On dirait que rien n'a été trouvé à cet endroit. Essayez peut-être une "
 "recherche ?"
+
+#: views/components/filters-case-study.html.twig:5
+msgid "Filter by expertise"
+msgstr "Filtrer par expertise"
+
+#: views/components/filters-case-study.html.twig:10
+msgid "All case studies"
+msgstr "Tous les projets"
 
 #: views/footer.html.twig:13
 msgid "We work together?"
@@ -849,17 +850,7 @@ msgstr "Contactez-moi"
 msgid "Menu"
 msgstr "Menu"
 
-#: views/pages/archive-case-study.html.twig:23
-#: views/pages/archive-case-study.html.twig:59
-msgid "Filter by expertise"
-msgstr "Filtrer par expertise"
-
-#: views/pages/archive-case-study.html.twig:28
-#: views/pages/archive-case-study.html.twig:64
-msgid "All case studies"
-msgstr "Tous les projets"
-
-#: views/pages/archive-case-study.html.twig:47
+#: views/pages/archive-case-study.html.twig:34
 msgid "Expertise"
 msgstr "Expertise"
 
@@ -890,6 +881,18 @@ msgstr "Jérémy Levron"
 #. Author URI of the plugin/theme
 msgid "https://19h47.fr/"
 msgstr "https://19h47.fr/"
+
+#~ msgid "Branding"
+#~ msgstr "Branding"
+
+#~ msgid "DA . UX/UI"
+#~ msgstr "DA . UX/UI"
+
+#~ msgid "Illustration"
+#~ msgstr "Illustration"
+
+#~ msgid "Product design"
+#~ msgstr "Product design"
 
 #~ msgid "Enter the LinkedIn URL here."
 #~ msgstr "Indiquer l’URL du compte LinkedIn."
