@@ -118,7 +118,7 @@ class Settings {
 				'name'        => 'authordescription',
 				'rows'        => 2,
 				'value'       => get_option( 'authordescription' ),
-				'placeholder' => __( 'Author Description', 'celia-uabry' ),
+				'placeholder' => __( 'Author Description', 'celia-aubry' ),
 			)
 		);
 

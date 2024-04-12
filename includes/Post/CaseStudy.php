@@ -8,8 +8,6 @@
 
 namespace CeliaAubry\Post;
 
-use Timber\{ Timber };
-
 /**
  * Case Study class
  */

@@ -53,7 +53,7 @@
 												'px-6 py-[2.375rem] relative after:bottom-0 after:mx-6 after:inset-x-0 after:bg-neutral-900 after:absolute after:h-px after:origin-right after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out',
 												'hover:after:scale-x-100 hover:after:origin-left',
 												child.master_object.meta( 'icon' ) ? 'flex gap-2' : 'block',
-												child.current or child.current_item_parent ? 'font-bold after:scale-x-100' : '',
+												child.current ? 'font-bold after:scale-x-100' : '',
 												child.classes | join( ' ' ),
 											) }}"
 											itemprop="url"

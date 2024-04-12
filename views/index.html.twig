@@ -26,6 +26,7 @@
 	</head>
 
 	<body class="font-sans">
+		{{- fn( 'wp_body_open' ) -}}
 
 		<div id="{{ post.id ? "page-#{post.id}" : 'page' }}" {{ body_class( '' ) }}>
 

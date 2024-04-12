@@ -39,7 +39,6 @@ class LoadPosts extends Piece {
 		};
 
 		if (this.term_id) {
-			console.log(this.taxonomy);
 			params.filters = JSON.stringify([{ taxonomy: this.taxonomy, term_id: this.term_id }]);
 		}
 

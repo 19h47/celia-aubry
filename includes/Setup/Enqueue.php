@@ -105,12 +105,12 @@ class Enqueue {
 			'text_domain'            => get_theme_text_domain(),
 			'messages'               => array(
 				'value_missing' => array(
-					'default' => _x( 'Please fill out this field.', 'messages', 'true-story' ),
+					'default' => _x( 'Please fill out this field.', 'messages', 'celia-aubry' ),
 				),
 				'type_mismatch' => array(
-					'email'   => _x( 'Please enter an email address.', 'messages', 'true-story' ),
-					'url'     => _x( 'Please enter a URL.', 'messages', 'true-story' ),
-					'default' => _x( 'Please match the expected format.', 'messages', 'true-story' ),
+					'email'   => _x( 'Please enter an email address.', 'messages', 'celia-aubry' ),
+					'url'     => _x( 'Please enter a URL.', 'messages', 'celia-aubry' ),
+					'default' => _x( 'Please match the expected format.', 'messages', 'celia-aubry' ),
 				),
 			),
 		);

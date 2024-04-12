@@ -10,20 +10,15 @@ class Header extends Piece {
 	}
 
 	mount() {
-		const body = document.body;
-
 		ScrollTrigger.create({
-			trigger: body,
 			start: "top -96px",
-			onUpdate: (self) => {
-				if (self.direction === 1) {
-					gsap.to(this, { duration: 0.3, y: -100, ease: "power1.inOut" });
+			end: 'max',
+			onUpdate: ({ direction }) => {
+				if (direction === 1) {
+					gsap.to(this, { duration: 0.3, y: -100, ease: "none" });
 				} else {
-					gsap.to(this, { duration: 0.3, y: 0, ease: "power1.inOut" });
+					gsap.to(this, { duration: 0.3, y: 0, ease: "none" });
 				}
-			},
-			onLeaveBack: () => {
-				gsap.to(this, { duration: 0.3, y: 0, ease: "power1.inOut" });
 			},
 		});
 	}

@@ -120,7 +120,7 @@ class Vite {
 		}
 
 		if ( ! array_key_exists( $asset, static::$manifest ) ) {
-			throw new Exception( __( 'Unknown Vite build asset: ' . $asset, 'celia-aubry' ) );
+			throw new Exception( printf( __( 'Unknown Vite build asset: %s', 'celia-aubry' ), $asset ) );
 		}
 
 		return implode( '/', array( get_stylesheet_directory_uri(), static::$build_path, static::$manifest[ $asset ]['file'] ) );
