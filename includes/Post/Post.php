@@ -36,24 +36,17 @@ class Post {
 			return false;
 		}
 
-		$post__in       = json_decode( wp_unslash( $_GET['postIn'] ) ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotValidated, WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
 		$offset         = (int) $_GET['offset'] ?? 0; // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotValidated, WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
 		$post_type      = (string) $_GET['postType']; // phpcs:ignore
 		$taxonomies     = json_decode( wp_unslash( $_GET['taxonomies'] ) ) ?? array(); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotValidated, WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
 		$posts_per_page = sanitize_text_field( wp_unslash( $_GET['postsPerPage'] ) ) ?? -1; // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotValidated, WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
-		$s              = sanitize_text_field( wp_unslash( $_GET['s'] ) ) ?? ''; // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotValidated, WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
 		$filters        = json_decode( wp_unslash( $_GET['filters'] ) ) ?? array();
-		$orderby        = (string) $_GET['orderby'] ?? 'post__in';
 
 		$args = array(
 			'post_type'           => $post_type,
 			'post_status'         => 'publish',
-			'post__in'            => $post__in,
 			'posts_per_page'      => $posts_per_page,
-			'orderby'             => $orderby,
-			'ignore_sticky_posts' => true,
 			'offset'              => $offset,
-			's'                   => $s,
 		);
 
 		if ( $taxonomies ) {

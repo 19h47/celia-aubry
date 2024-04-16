@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Célia Aubry\n"
-"POT-Creation-Date: 2024-04-12 09:49+0200\n"
+"POT-Creation-Date: 2024-04-12 11:30+0200\n"
 "PO-Revision-Date: 2024-03-31 18:10+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -22,6 +22,14 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 "X-Poedit-SearchPathExcluded-1: node_modules\n"
 "X-Poedit-SearchPathExcluded-2: vendor\n"
+
+#: 404.php:17
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: 404.php:18
+msgid "It looks like nothing was found at this location."
+msgstr ""
 
 #: includes/Plugins/ACF/IncludeFields/BlocksFields.php:67
 msgid "Blocks"
@@ -248,7 +256,7 @@ msgid "Category"
 msgstr ""
 
 #: includes/Plugins/ACF/IncludeFields/BlocksFields.php:506
-#: includes/Post/CaseStudy.php:163
+#: includes/Post/CaseStudy.php:161
 msgid "Case Study"
 msgstr ""
 
@@ -339,71 +347,71 @@ msgid "Front Page Fields"
 msgstr ""
 
 #. translators: Publish box date format, see https://secure.php.net/date
-#: includes/Post/CaseStudy.php:45
+#: includes/Post/CaseStudy.php:43
 msgid "M j, Y @ H:i"
 msgstr ""
 
-#: includes/Post/CaseStudy.php:50 includes/Post/CaseStudy.php:134
+#: includes/Post/CaseStudy.php:48 includes/Post/CaseStudy.php:132
 msgid "View Case Study"
 msgstr ""
 
-#: includes/Post/CaseStudy.php:56 includes/Post/CaseStudy.php:62
+#: includes/Post/CaseStudy.php:54 includes/Post/CaseStudy.php:60
 msgid "Preview Case Study"
 msgstr ""
 
-#: includes/Post/CaseStudy.php:67 includes/Post/CaseStudy.php:70
+#: includes/Post/CaseStudy.php:65 includes/Post/CaseStudy.php:68
 msgid "Case Study updated."
 msgstr ""
 
-#: includes/Post/CaseStudy.php:68
+#: includes/Post/CaseStudy.php:66
 msgid "Custom field updated."
 msgstr ""
 
-#: includes/Post/CaseStudy.php:69
+#: includes/Post/CaseStudy.php:67
 msgid "Custom field deleted."
 msgstr ""
 
 #. translators: %s: date and time of the revision
-#: includes/Post/CaseStudy.php:72
+#: includes/Post/CaseStudy.php:70
 #, php-format
 msgid "Case Study restored to revision from %s."
 msgstr ""
 
-#: includes/Post/CaseStudy.php:73
+#: includes/Post/CaseStudy.php:71
 msgid "Case Study published."
 msgstr ""
 
-#: includes/Post/CaseStudy.php:74
+#: includes/Post/CaseStudy.php:72
 msgid "Case Study saved."
 msgstr ""
 
-#: includes/Post/CaseStudy.php:75
+#: includes/Post/CaseStudy.php:73
 msgid "Case Study submitted."
 msgstr ""
 
-#: includes/Post/CaseStudy.php:76
+#: includes/Post/CaseStudy.php:74
 #, php-format
 msgid "Case Study scheduled for: %s."
 msgstr ""
 
-#: includes/Post/CaseStudy.php:77
+#: includes/Post/CaseStudy.php:75
 msgid "Case Study draft updated."
 msgstr ""
 
 #. translators: %s: Number of case studies.
-#: includes/Post/CaseStudy.php:103
+#: includes/Post/CaseStudy.php:101
 #, php-format
 msgid "%s case study updated."
 msgid_plural "%s case studies updated."
 msgstr[0] ""
 msgstr[1] ""
 
-#: includes/Post/CaseStudy.php:104
+#: includes/Post/CaseStudy.php:102
 msgid "1 case study not updated, somebody is editing it."
 msgstr ""
 
 #. translators: %s: Number of case studies.
-#: includes/Post/CaseStudy.php:106
+#: includes/Post/CaseStudy.php:104
 #, php-format
 msgid "%s case study not updated, somebody is editing it."
 msgid_plural "%s case studies not updated, somebody is editing them."
@@ -411,7 +419,7 @@ msgstr[0] ""
 msgstr[1] ""
 
 #. translators: %s: Number of case studies.
-#: includes/Post/CaseStudy.php:108
+#: includes/Post/CaseStudy.php:106
 #, php-format
 msgid "%s case study permanently deleted."
 msgid_plural "%s case study permanently deleted."
@@ -419,7 +427,7 @@ msgstr[0] ""
 msgstr[1] ""
 
 #. translators: %s: Number of case studies..
-#: includes/Post/CaseStudy.php:110
+#: includes/Post/CaseStudy.php:108
 #, php-format
 msgid "%s case study moved to the Trash."
 msgid_plural "%s case study moved to the Trash."
@@ -427,125 +435,125 @@ msgstr[0] ""
 msgstr[1] ""
 
 #. translators: %s: Number of case studies.
-#: includes/Post/CaseStudy.php:112
+#: includes/Post/CaseStudy.php:110
 #, php-format
 msgid "%s case study restored from the Trash."
 msgid_plural "%s case study restored from the Trash."
 msgstr[0] ""
 msgstr[1] ""
 
-#: includes/Post/CaseStudy.php:127
+#: includes/Post/CaseStudy.php:125
 msgctxt "case study type generale name"
 msgid "Case Studies"
 msgstr ""
 
-#: includes/Post/CaseStudy.php:128
+#: includes/Post/CaseStudy.php:126
 msgctxt "case study type singular name"
 msgid "Case Study"
 msgstr ""
 
-#: includes/Post/CaseStudy.php:129
+#: includes/Post/CaseStudy.php:127
 msgctxt "case study type"
 msgid "Add New"
 msgstr ""
 
-#: includes/Post/CaseStudy.php:130
+#: includes/Post/CaseStudy.php:128
 msgid "Add New Case Study"
 msgstr ""
 
-#: includes/Post/CaseStudy.php:131
+#: includes/Post/CaseStudy.php:129
 msgid "Edit Case Study"
 msgstr ""
 
-#: includes/Post/CaseStudy.php:132
+#: includes/Post/CaseStudy.php:130
 msgid "New Case Study"
 msgstr ""
 
-#: includes/Post/CaseStudy.php:133
+#: includes/Post/CaseStudy.php:131
 msgid "View Case Studies"
 msgstr ""
 
-#: includes/Post/CaseStudy.php:135
+#: includes/Post/CaseStudy.php:133
 msgid "Search Case Studies"
 msgstr ""
 
-#: includes/Post/CaseStudy.php:136
+#: includes/Post/CaseStudy.php:134
 msgid "No case studies found."
 msgstr ""
 
-#: includes/Post/CaseStudy.php:137
+#: includes/Post/CaseStudy.php:135
 msgid "No case studies found in Trash."
 msgstr ""
 
-#: includes/Post/CaseStudy.php:138
+#: includes/Post/CaseStudy.php:136
 msgid "Parent Case Study:"
 msgstr ""
 
-#: includes/Post/CaseStudy.php:139
+#: includes/Post/CaseStudy.php:137
 msgid "All Case Studies"
 msgstr ""
 
-#: includes/Post/CaseStudy.php:140
+#: includes/Post/CaseStudy.php:138
 msgid "Case Study Archives"
 msgstr ""
 
-#: includes/Post/CaseStudy.php:141
+#: includes/Post/CaseStudy.php:139
 msgid "Case Study Attributes"
 msgstr ""
 
-#: includes/Post/CaseStudy.php:142
+#: includes/Post/CaseStudy.php:140
 msgid "Insert into case study"
 msgstr ""
 
-#: includes/Post/CaseStudy.php:143
+#: includes/Post/CaseStudy.php:141
 msgid "Uploaded to this case study"
 msgstr ""
 
-#: includes/Post/CaseStudy.php:144
+#: includes/Post/CaseStudy.php:142
 msgctxt "case study"
 msgid "Featured Image"
 msgstr ""
 
-#: includes/Post/CaseStudy.php:145
+#: includes/Post/CaseStudy.php:143
 msgctxt "case study"
 msgid "Set featured image"
 msgstr ""
 
-#: includes/Post/CaseStudy.php:146
+#: includes/Post/CaseStudy.php:144
 msgctxt "case study"
 msgid "Remove featured image"
 msgstr ""
 
-#: includes/Post/CaseStudy.php:147
+#: includes/Post/CaseStudy.php:145
 msgctxt "case study"
 msgid "Use as featured image"
 msgstr ""
 
-#: includes/Post/CaseStudy.php:148
+#: includes/Post/CaseStudy.php:146
 msgid "Case studies list navigation"
 msgstr ""
 
-#: includes/Post/CaseStudy.php:149
+#: includes/Post/CaseStudy.php:147
 msgid "Case studies list"
 msgstr ""
 
-#: includes/Post/CaseStudy.php:150
+#: includes/Post/CaseStudy.php:148
 msgid "Case study published."
 msgstr ""
 
-#: includes/Post/CaseStudy.php:151
+#: includes/Post/CaseStudy.php:149
 msgid "Case study published privately."
 msgstr ""
 
-#: includes/Post/CaseStudy.php:152
+#: includes/Post/CaseStudy.php:150
 msgid "Case study reverted to draft."
 msgstr ""
 
-#: includes/Post/CaseStudy.php:153
+#: includes/Post/CaseStudy.php:151
 msgid "Case study scheduled."
 msgstr ""
 
-#: includes/Post/CaseStudy.php:154
+#: includes/Post/CaseStudy.php:152
 msgid "Case study updated."
 msgstr ""
 
@@ -868,7 +876,7 @@ msgid "https://github.com/19h47/celia-aubry/"
 msgstr ""
 
 #. Description of the plugin/theme
-msgid "WordPress Theme for Célia Aubry"
+msgid "WordPress Theme for Celia Aubry"
 msgstr ""
 
 #. Author of the plugin/theme
