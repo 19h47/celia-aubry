@@ -55,6 +55,7 @@
 						href="{{ item.url }}"
 						class="{{ html_classes(
 							'link',
+							'[&.is-active]:text-neutral-900',
 							item.current ? 'is-active' : '',
 							item.classes | join( ' ' ),
 						) }}"
