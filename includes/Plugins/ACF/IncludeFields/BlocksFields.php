@@ -275,6 +275,28 @@ class BlocksFields {
 								),
 								'message' => __( 'Is the image full width?', 'celia-aubry' ),
 							),
+							array(
+								'key' => 'field_' . $key  . '_image_width',
+								'label' => __( 'Width', 'celia-aubry' ),
+								'name' => 'width',
+								'type' => 'select',
+								'instructions' => __( 'Should the image retain its intrinsic width or take the full width of its parent?', 'celia-aubry' ),
+								'conditional_logic' => array(
+									array(
+										array(
+											'field' => 'field_' . $key . '_image_full_width',
+											'operator' => '!=',
+											'value' => '1',
+										),
+									),
+								),
+								'choices' => array(
+									'auto' => __( 'Intrinsic width', 'celia-aubry' ),
+									'full' => __( 'Full width', 'celia-aubry' ),
+								),
+								'default_value' => 'full',
+								'return_format' => 'value',
+							),
 						),
 					),
 					'layout_' . $key . '_case_studies_grid' => array(

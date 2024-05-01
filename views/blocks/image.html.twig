@@ -32,8 +32,9 @@
 					{
 						image: block.image,
 						classes: [
-							'block object-cover rounded-[1.25rem] w-auto mx-auto',
-							aspect_ratio[ block.aspect_ratio ]
+							'block object-cover rounded-[1.25rem]',
+							aspect_ratio[ block.aspect_ratio ],
+							'auto' == block.width ? 'w-auto mx-auto' : 'w-full'
 						]
 					}
 				)

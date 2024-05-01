@@ -8,10 +8,12 @@
  #}
 
 {% block contact %}
-	<div class="px-4 xl:px-14 mt-10 xl:mt-20 mb-16">
-		<div class="bg-neutral-900 rounded-[1.25rem] py-20 text-white text-center space-y-6">
-			<h2 class="h2 text-balance">{{- __( 'We work together?', 'celia-aubry' ) -}}</h2>
-			<a href="{{ contact_url }}" class="button">{{- __( 'Contact me', 'celia-aubry' ) -}}</a>
+	<div class="mt-10 xl:mt-20 mb-16">
+		<div class="container">
+			<div class="bg-neutral-900 rounded-[1.25rem] py-20 text-white text-center space-y-6">
+				<h2 class="h2 text-balance">{{- __( 'We work together?', 'celia-aubry' ) -}}</h2>
+				<a href="{{ contact_url }}" class="button">{{- __( 'Contact me', 'celia-aubry' ) -}}</a>
+			</div>
 		</div>
 	</div>
 {% endblock %}

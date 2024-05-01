@@ -98,67 +98,70 @@
 			itemscope
 			itemtype="http://schema.org/SiteNavigationElement"
 		>
-			{% for item in nav_menus.main.get_items() %}
-				{% if '#' == item.url and item.children %}
-					<li class="{{ html_classes( 'js-accordion-panel' ) }}" data-accordion-open="false" data-accordion-deselect="true">
-						<button
-							type="button"
-							class="{{ html_classes(
-								'js-accordion-header',
-								'flex gap-1 items-center mx-auto',
-								item.current or item.current_item_parent ? '' : '',
-								item.classes | join( ' ' ),
-							) }}"
-							aria-expanded="false"
-							aria-controls="{{ item.slug }}"
-						>
-							{{- item.title -}}
-							<span class="overflow-hidden">{{- icon( 'arrow-down', { classes: [ 'size-2.5' ] } ) -}}</span>
-						</button>
 
-						{%- if item.children -%}
-							<div id="{{ item.slug }}" role="region" class="duration-300 ease-linear transition-[max-height]">
-								<ul class="space-y-6 pt-6 js-accordion-inner">
-									{%- for child in item.children -%}
-										<li>
-											<a
-												href="{{ child.url }}"
-												class="{{ html_classes(
-													'',
-													child.master_object.meta( 'icon' ) ? 'inline-flex gap-2' : 'block',
-													child.current ? '' : '',
-													child.classes | join( ' ' ),
-												) }}"
-												itemprop="url"
-												{{ child.is_target_blank or child.is_external ? " target=\"#{item.target}\" rel=\"noopener noreferer\"" }}
-											>
-												{%- if child.master_object.meta( 'icon' ) -%}
-													<img src="{{ get_image( child.master_object.meta( 'icon' ) ).src }}" alt="{{ child.master_object.name }}" width="20" height="20">
-												{%- endif -%}
-												{{- child.title -}}
-											</a>
-										</li>
-									{%- endfor -%}
-								</ul>
-						{%- endif -%}
-					</li>
-				{% else %}
-					<li class="{{ html_classes() }}">
-						<a
-							href="{{ item.url }}"
-							class="{{ html_classes(
-								'',
-								item.current ? '' : '',
-								item.classes | join( ' ' ),
-							) }}"
-							itemprop="url"
-							{{ item.is_target_blank or item.is_external ? " target=\"#{item.target}\" rel=\"noopener noreferer\"" }}
-						>
-							{{- item.title -}}
-						</a>
-					</li>
-				{% endif %}
-			{% endfor %}
+				{% for item in nav_menus.main.get_items() %}
+					{% if '#' == item.url and item.children %}
+						<div class="{{ html_classes( 'js-accordion-panel' ) }}" data-accordion-open="false" data-accordion-deselect="true">
+							<button
+								type="button"
+								class="{{ html_classes(
+									'js-accordion-header',
+									'flex gap-1 items-center mx-auto',
+									item.current or item.current_item_parent ? '' : '',
+									item.classes | join( ' ' ),
+								) }}"
+								aria-expanded="false"
+								aria-controls="{{ item.slug }}"
+							>
+								{{- item.title -}}
+								<span class="overflow-hidden">{{- icon( 'arrow-down', { classes: [ 'size-2.5' ] } ) -}}</span>
+							</button>
+
+							{%- if item.children -%}
+								<div id="{{ item.slug }}" role="region" class="duration-300 ease-linear transition-[max-height]">
+									<ul class="space-y-6 pt-6 js-accordion-inner">
+										{%- for child in item.children -%}
+											<li>
+												<a
+													href="{{ child.url }}"
+													class="{{ html_classes(
+														'',
+														child.master_object.meta( 'icon' ) ? 'inline-flex gap-2' : 'block',
+														child.current ? '' : '',
+														child.classes | join( ' ' ),
+													) }}"
+													itemprop="url"
+													{{ child.is_target_blank or child.is_external ? " target=\"#{item.target}\" rel=\"noopener noreferer\"" }}
+												>
+													{%- if child.master_object.meta( 'icon' ) -%}
+														<img src="{{ get_image( child.master_object.meta( 'icon' ) ).src }}" alt="{{ child.master_object.name }}" width="20" height="20">
+													{%- endif -%}
+													{{- child.title -}}
+												</a>
+											</li>
+										{%- endfor -%}
+									</ul>
+								</div>
+							{%- endif -%}
+						</div>
+					{% else %}
+						<div class="{{ html_classes() }}">
+							<a
+								href="{{ item.url }}"
+								class="{{ html_classes(
+									'',
+									item.current ? '' : '',
+									item.classes | join( ' ' ),
+								) }}"
+								itemprop="url"
+								{{ item.is_target_blank or item.is_external ? " target=\"#{item.target}\" rel=\"noopener noreferer\"" }}
+							>
+								{{- item.title -}}
+							</a>
+						</div>
+					{% endif %}
+				{% endfor %}
+
 		</c-accordion>
 
 	</div>
