@@ -28,7 +28,12 @@
 						<div class="text-large">{{- post.meta( 'hero' ).content | default( post.content ) }}</div>
 						<p class="text-medium mt-4 xl:mt-8">
 							<strong>{{- post.meta( 'hero' ).contact -}}</strong><br>
-							<a href="{{ post.meta( 'hero' ).email }}" class="link">aubrycelia.a@gmail.com</a>
+
+							{%- if post.meta( 'hero' ).email.url -%}
+								<a href="{{ post.meta( 'hero' ).email.url }}" {{ post.meta( 'hero' ).email.target ? 'rel="noopener noreferer" target="_blank"' }} class="link">
+									{{- post.meta( 'hero' ).email.title | default( contact_url ) -}}
+								</a>
+							{%- endif -%}
 						</p>
 					</div>
 				</div>

@@ -11,11 +11,13 @@
 
 use Timber\{ Timber };
 
+$fields = get_field( '404', 'option' );
+
 $templates    = array( 'pages/404.html.twig' );
 $data         = Timber::context();
 $data['post'] = array(
-	'title'   => __( 'Oops! That page can&rsquo;t be found.', 'celia-aubry' ),
-	'content' => '<p>' . __( 'It looks like nothing was found at this location.', 'celia-aubry' ) . '</p>',
+	'title'   => $fields['title'],
+	'content' => '<p>' . $fields['content'] . '</p>',
 );
 
 Timber::render( $templates, $data );

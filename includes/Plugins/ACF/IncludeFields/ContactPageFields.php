@@ -78,7 +78,7 @@ class ContactPageFields {
 						'key'         => 'field_' . $key . '_hero_email',
 						'label'       => __( 'Email', 'celia-aubry' ),
 						'name'        => 'email',
-						'type'        => 'email',
+						'type'        => 'link',
 						'placeholder' => __( 'artvandelay@vandelayindustries.com', 'celia-aubry' ),
 					),
 				),

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Célia Aubry\n"
-"POT-Creation-Date: 2024-05-01 13:06+0200\n"
-"PO-Revision-Date: 2024-05-01 13:06+0200\n"
+"POT-Creation-Date: 2024-05-03 11:42+0200\n"
+"PO-Revision-Date: 2024-05-03 11:43+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -16,18 +16,18 @@ msgstr ""
 "X-Poedit-WPHeader: style.css\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
-"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 "X-Poedit-SearchPathExcluded-1: node_modules\n"
 "X-Poedit-SearchPathExcluded-2: vendor\n"
 
-#: 404.php:17
+#: 404.php:17 includes/Plugins/ACF/IncludeFields/ThemeOptionsFields.php:63
 msgid "Oops! That page can&rsquo;t be found."
 msgstr "Oups ! Cette page est introuvable."
 
-#: 404.php:18
+#: 404.php:18 includes/Plugins/ACF/IncludeFields/ThemeOptionsFields.php:74
 msgid "It looks like nothing was found at this location."
 msgstr "On dirait que rien n'a été trouvé à cet endroit."
 
@@ -65,8 +65,10 @@ msgstr "Galerie"
 #: includes/Plugins/ACF/IncludeFields/BlocksFields.php:553
 #: includes/Plugins/ACF/IncludeFields/ContactPageFields.php:54
 #: includes/Plugins/ACF/IncludeFields/ContactPageFields.php:57
-#: includes/Plugins/ACF/IncludeFields/FrontPageFields.php:53
-#: includes/Plugins/ACF/IncludeFields/FrontPageFields.php:57
+#: includes/Plugins/ACF/IncludeFields/FrontPageFields.php:54
+#: includes/Plugins/ACF/IncludeFields/FrontPageFields.php:58
+#: includes/Plugins/ACF/IncludeFields/ThemeOptionsFields.php:58
+#: includes/Plugins/ACF/IncludeFields/ThemeOptionsFields.php:62
 msgid "Title"
 msgstr "Titre"
 
@@ -87,8 +89,10 @@ msgstr "Indiquez le titre du bloc. (Optionnel)"
 #: includes/Plugins/ACF/IncludeFields/BlocksFields.php:580
 #: includes/Plugins/ACF/IncludeFields/ContactPageFields.php:61
 #: includes/Plugins/ACF/IncludeFields/ContactPageFields.php:65
-#: includes/Plugins/ACF/IncludeFields/FrontPageFields.php:62
-#: includes/Plugins/ACF/IncludeFields/FrontPageFields.php:66
+#: includes/Plugins/ACF/IncludeFields/FrontPageFields.php:63
+#: includes/Plugins/ACF/IncludeFields/FrontPageFields.php:67
+#: includes/Plugins/ACF/IncludeFields/ThemeOptionsFields.php:67
+#: includes/Plugins/ACF/IncludeFields/ThemeOptionsFields.php:72
 msgid "Content"
 msgstr "Contenu"
 
@@ -326,8 +330,8 @@ msgstr "Description"
 
 #: includes/Plugins/ACF/IncludeFields/CaseStudyFields.php:53
 #: includes/Plugins/ACF/IncludeFields/CaseStudyFields.php:56
-#: includes/Plugins/ACF/IncludeFields/FrontPageFields.php:71
-#: includes/Plugins/ACF/IncludeFields/FrontPageFields.php:74
+#: includes/Plugins/ACF/IncludeFields/FrontPageFields.php:72
+#: includes/Plugins/ACF/IncludeFields/FrontPageFields.php:75
 msgid "Date"
 msgstr "Date"
 
@@ -340,7 +344,7 @@ msgid "Case Study Fields"
 msgstr "Champs du projet"
 
 #: includes/Plugins/ACF/IncludeFields/ContactPageFields.php:46
-#: includes/Plugins/ACF/IncludeFields/FrontPageFields.php:46
+#: includes/Plugins/ACF/IncludeFields/FrontPageFields.php:47
 msgid "Hero"
 msgstr "Hero"
 
@@ -362,9 +366,29 @@ msgstr "artvandelay@vandelayindustries.com"
 msgid "Contact Page Fields"
 msgstr "Champs de la page contact"
 
-#: includes/Plugins/ACF/IncludeFields/FrontPageFields.php:83
+#: includes/Plugins/ACF/IncludeFields/FrontPageFields.php:84
 msgid "Front Page Fields"
 msgstr "Champs de la page d’accueil"
+
+#: includes/Plugins/ACF/IncludeFields/ThemeOptionsFields.php:46
+msgid "404"
+msgstr "404"
+
+#: includes/Plugins/ACF/IncludeFields/ThemeOptionsFields.php:61
+msgid "404 title."
+msgstr "Titre de la page 404."
+
+#: includes/Plugins/ACF/IncludeFields/ThemeOptionsFields.php:70
+msgid "404 content."
+msgstr "Contenu de la page 404."
+
+#: includes/Plugins/ACF/IncludeFields/ThemeOptionsFields.php:83
+msgid "Theme Options Fields"
+msgstr "Champs des options du thème"
+
+#: includes/Plugins/ACF/Init.php:32
+msgid "Theme Options"
+msgstr "Options du thème"
 
 #. translators: Publish box date format, see https://secure.php.net/date
 #: includes/Post/CaseStudy.php:43

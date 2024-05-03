@@ -12,6 +12,7 @@ namespace CeliaAubry\Plugins\ACF\IncludeFields;
  * Front Page Fields
  */
 class FrontPageFields {
+
 	/**
 	 * Runs initialization tasks.
 	 *
