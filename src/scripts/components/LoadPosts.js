@@ -10,11 +10,11 @@ class LoadPosts extends Piece {
 	}
 
 	mount() {
-		this.on("click", this.$("[data-filter]"), this.handleClick);
+		this.on("click", this.$All("[data-filter]"), this.handleClick);
 	}
 
 	unmount() {
-		this.off("click", this.$("[data-filter]"), this.handleClick);
+		this.off("click", this.$All("[data-filter]"), this.handleClick);
 	}
 
 	async load() {
@@ -51,7 +51,7 @@ class LoadPosts extends Piece {
 		this.taxonomy = target.getAttribute("data-taxonomy");
 		this.term_id = target.value;
 
-		this.$("[data-filter]").forEach(($filter) => $filter.classList.remove("is-active"));
+		this.$All("[data-filter]").forEach(($filter) => $filter.classList.remove("is-active"));
 
 		target.classList.add("is-active");
 	}
@@ -61,15 +61,15 @@ class LoadPosts extends Piece {
 			return;
 		}
 
-		this.$("[data-container]")[0].innerHTML = JSON.parse(html);
+		this.$("[data-container]").innerHTML = JSON.parse(html);
 	}
 
 	locked() {
-		this.$("[data-container]")[0].classList.add("opacity-50");
+		this.$("[data-container]").classList.add("opacity-50");
 	}
 
 	unlocked() {
-		this.$("[data-container]")[0].classList.remove("opacity-50");
+		this.$("[data-container]").classList.remove("opacity-50");
 		window.scrollTo({ top: 0, behavior: 'smooth' });
 	}
 

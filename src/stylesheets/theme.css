@@ -1,0 +1,13 @@
+@theme {
+	--font-serif: "Maghfirea", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+	--font-sans: "Inria Sans", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+	--color-neutral-50: #f1f1f1;
+	--color-neutral-400: #acabab;
+	--color-neutral-900: #222222;
+
+	--color-brand-beige: #fbf9f7;
+	--color-brand-jaune: #fae360;
+	--color-brand-rose: #f4c4ce;
+	--color-brand-vert-dark: #002823;
+}

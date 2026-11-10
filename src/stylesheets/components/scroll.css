@@ -1,0 +1,21 @@
+/* Parallax: c-scroll rises by half its height while its parent crosses the viewport. */
+@layer components {
+	:has(> c-scroll) {
+		view-timeline-name: --c-scroll;
+	}
+
+	c-scroll {
+		@variant xl {
+			@variant motion-safe {
+				animation: c-scroll linear both;
+				animation-timeline: --c-scroll;
+			}
+		}
+	}
+
+	@keyframes c-scroll {
+		to {
+			translate: 0 -50%;
+		}
+	}
+}

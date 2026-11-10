@@ -15,7 +15,7 @@
 	{% set image = get_image( image ) %}
 	{% set size = 'image/gif' == image.post_mime_type ? 'full' : size | default( 'large' ) %}
 
-	<picture{{ size ? " data-size=\"#{ size }\"" : '' }} data-mime-type="{{ image.post_mime_type }}">
+	<picture class="block"{{ size ? " data-size=\"#{ size }\"" : '' }} data-mime-type="{{ image.post_mime_type }}">
 
 		{%- if 'image/svg+xml' != image.post_mime_type and 'image/gif' != image.post_mime_type -%}
 			{%- if image.srcset -%}
