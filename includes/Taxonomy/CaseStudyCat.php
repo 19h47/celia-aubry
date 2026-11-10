@@ -24,6 +24,33 @@ class CaseStudyCat {
 	 */
 	public function run() {
 		add_action( 'init', array( $this, 'register' ) );
+		add_filter( 'get_terms_orderby', array( $this, 'orderby' ), 10, 3 );
+	}
+
+	/**
+	 * List the categories by their order field, then by name, wherever they
+	 * are listed by name (the default). A category with no order comes last.
+	 *
+	 * @param string     $orderby    ORDER BY clause of the term query.
+	 * @param array      $args       Term query arguments.
+	 * @param array|null $taxonomies Taxonomies of the term query.
+	 *
+	 * @see https://developer.wordpress.org/reference/hooks/get_terms_orderby/
+	 *
+	 * @return string
+	 */
+	public function orderby( string $orderby, array $args, ?array $taxonomies ): string {
+		if ( 't.name' !== $orderby || array( 'case_study_cat' ) !== array_values( (array) $taxonomies ) ) {
+			return $orderby;
+		}
+
+		global $wpdb;
+
+		return $wpdb->prepare(
+			"COALESCE( ( SELECT CAST( NULLIF( meta_value, '' ) AS UNSIGNED ) FROM {$wpdb->termmeta} WHERE term_id = t.term_id AND meta_key = %s LIMIT 1 ), %d ), t.name",
+			'order',
+			PHP_INT_MAX
+		);
 	}
 
 	/**

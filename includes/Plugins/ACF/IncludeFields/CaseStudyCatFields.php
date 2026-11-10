@@ -58,6 +58,15 @@ class CaseStudyCatFields {
 				'return_format' => 'id',
 				'library'       => 'all',
 			),
+			array(
+				'key'          => 'field_' . $key . '_order',
+				'label'        => __( 'Order', 'celia-aubry' ),
+				'name'         => 'order',
+				'type'         => 'number',
+				'instructions' => __( 'Categories are listed by this number, smallest first.', 'celia-aubry' ),
+				'min'          => 0,
+				'step'         => 1,
+			),
 		);
 
 		acf_add_local_field_group(

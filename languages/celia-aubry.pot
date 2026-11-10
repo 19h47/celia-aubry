@@ -313,6 +313,14 @@ msgstr ""
 msgid "Icon"
 msgstr ""
 
+#: includes/Plugins/ACF/IncludeFields/CaseStudyCatFields.php:63
+msgid "Order"
+msgstr ""
+
+#: includes/Plugins/ACF/IncludeFields/CaseStudyCatFields.php:66
+msgid "Categories are listed by this number, smallest first."
+msgstr ""
+
 #: includes/Plugins/ACF/IncludeFields/CaseStudyCatFields.php:66
 msgid "Case Study Cat Fields"
 msgstr ""

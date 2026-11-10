@@ -319,6 +319,14 @@ msgstr "Extrait"
 msgid "Icon"
 msgstr "Icône"
 
+#: includes/Plugins/ACF/IncludeFields/CaseStudyCatFields.php:63
+msgid "Order"
+msgstr "Ordre"
+
+#: includes/Plugins/ACF/IncludeFields/CaseStudyCatFields.php:66
+msgid "Categories are listed by this number, smallest first."
+msgstr "Les catégories sont listées par ce nombre, du plus petit au plus grand."
+
 #: includes/Plugins/ACF/IncludeFields/CaseStudyCatFields.php:66
 msgid "Case Study Cat Fields"
 msgstr "Champs d’une catégorie de projet"
