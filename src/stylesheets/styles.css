@@ -11,11 +11,28 @@
 @import "utilities/scrollbar.css";
 @import "utilities/typography.css";
 
+/* Inria Sans: latin subset from Google Fonts, the weights it served (400 and 700). */
+@font-face {
+	font-family: "Inria Sans";
+	src: url("../fonts/inria-sans/inria-sans-regular.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Inria Sans";
+	src: url("../fonts/inria-sans/inria-sans-bold.woff2") format("woff2");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
 /* Maghfirea */
 @font-face {
 	font-family: "Maghfirea";
 	src: url("../fonts/maghfirea/maghfirea-regular.woff2") format("woff2");
 	font-weight: 400;
 	font-style: normal;
-	font-display: block;
+	font-display: swap;
 }
