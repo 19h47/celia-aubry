@@ -39,7 +39,7 @@
 				</div>
 			</div>
 
-			{{- include( 'components/image.html.twig', { image: post.thumbnail, classes: [ 'aspect-square xl:ml-auto block w-full xl:w-1/2 object-cover object-center' ] } ) -}}
+			{{- include( 'components/image.html.twig', { image: post.thumbnail, loading: 'eager', attributes: { fetchpriority: 'high' }, classes: [ 'aspect-square xl:ml-auto block w-full xl:w-1/2 object-cover object-center' ] } ) -}}
 		</div>
 	</main>
 {% endblock %}

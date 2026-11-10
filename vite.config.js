@@ -1,6 +1,7 @@
 import { defineConfig } from "vite";
 import laravel from 'laravel-vite-plugin';
 import viteSvgSpriteWrapper from 'vite-svg-sprite-wrapper';
+import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
 	base: '',
@@ -12,6 +13,7 @@ export default defineConfig({
 		assetsDir: 'src',
 	},
 	plugins: [
+		tailwindcss(),
 		laravel({
 			publicDirectory: 'dist',
 			input: [
@@ -20,7 +22,10 @@ export default defineConfig({
 			],
 			refresh: [
 				'**.php', '**.twig'
-			]
+			],
+			assets: [
+				'src/img/**',
+			],
 		}),
 		viteSvgSpriteWrapper({
 			icons: 'src/icons/*.svg',

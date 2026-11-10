@@ -1,0 +1,15 @@
+/* Tailwind 3 defaults that Tailwind 4 changed: gray borders and pointer buttons. */
+@layer base {
+	*,
+	::after,
+	::before,
+	::backdrop,
+	::file-selector-button {
+		border-color: var(--color-gray-200, currentcolor);
+	}
+
+	button:not(:disabled),
+	[role="button"]:not(:disabled) {
+		cursor: pointer;
+	}
+}

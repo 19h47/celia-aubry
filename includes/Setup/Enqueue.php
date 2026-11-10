@@ -25,32 +25,70 @@ class Enqueue {
 		add_action( 'wp_enqueue_scripts', array( $this, 'dequeue_styles' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
 
-		add_action( 'wp_head', array( $this, 'preload_wp_scripts' ) );
 		add_action( 'wp_head', array( $this, 'preload_wp_styles' ) );
+		add_filter( 'wp_preload_resources', array( $this, 'preload_resources' ) );
+		add_filter( 'wp_speculation_rules_configuration', array( $this, 'speculation_rules_configuration' ) );
+	}
+
+
+	/**
+	 * Preload the fonts painted above the fold (Inria Sans for the body and the
+	 * current menu item, Maghfirea for the titles) so they are not discovered
+	 * only once the CSS is parsed.
+	 *
+	 * @param array $resources Resources to preload.
+	 * @return array
+	 */
+	public function preload_resources( array $resources ): array {
+		$fonts = array( 'inria-sans/inria-sans-regular', 'inria-sans/inria-sans-bold', 'maghfirea/maghfirea-regular' );
+
+		foreach ( $fonts as $font ) {
+			$resources[] = array(
+				'href'        => Vite::asset( 'src/fonts/' . $font . '.woff2' ),
+				'as'          => 'font',
+				'type'        => 'font/woff2',
+				'crossorigin' => 'anonymous',
+			);
+		}
+
+		return $resources;
+	}
+
+
+	/**
+	 * Prefetch a linked page after a short hover (`moderate`) rather than on
+	 * click. Prefetch only: prerendering would run the page's scripts before
+	 * it is shown. `null` (logged-in visitors, plain permalinks) keeps
+	 * speculative loading off.
+	 *
+	 * @param array|null $config Speculation rules configuration.
+	 * @return array|null
+	 */
+	public function speculation_rules_configuration( ?array $config ): ?array {
+		if ( null === $config ) {
+			return null;
+		}
+
+		return array(
+			'mode'      => 'prefetch',
+			'eagerness' => 'moderate',
+		);
 	}
 
 
 	/**
 	 * Enqueue styles.
 	 *
+	 * Fonts are self-hosted: see src/stylesheets/styles.css.
+	 *
 	 * @access public
 	 * @return void
 	 * @since  1.0.0
 	 */
 	public function enqueue_styles(): void {
-		// Add custom fonts, used in the main stylesheet.
-		$webfonts = array();
-
-		foreach ( get_webfonts() as $name => $url ) {
-			wp_register_style( 'font-' . $name, $url, array(), '1.0.0' );
-			$webfonts[] = "font-$name";
-		}
-
-		// register theme-style-css
 		$filename = Vite::asset( 'src/stylesheets/styles.css' );
 
-		// enqueue theme-style-css into our head
-		wp_enqueue_style( get_theme_text_domain() . '-main', $filename, $webfonts, null );
+		wp_enqueue_style( get_theme_text_domain() . '-main', $filename, array(), null );
 	}
 
 
@@ -115,7 +153,6 @@ class Enqueue {
 			),
 		);
 
-
 		wp_register_script( get_theme_text_domain() . '-feature', false );
 		wp_add_inline_script( get_theme_text_domain() . '-feature', '!function(e,n,o){("ontouchstart"in e||e.DocumentTouch&&n instanceof DocumentTouch||o.MaxTouchPoints>0||o.msMaxTouchPoints>0)&&(n.documentElement.className=n.documentElement.className.replace(/\bno-touch\b/,"touch")),n.documentElement.className=n.documentElement.className.replace(/\bno-js\b/,"js")}(window,document,navigator);' );
 		wp_add_inline_script( get_theme_text_domain() . '-feature', '/Safari/.test(navigator.userAgent)&&/Apple Computer/.test(navigator.vendor)&&(document.documentElement.className+=" is-safari");' );
@@ -131,32 +168,6 @@ class Enqueue {
 
 		wp_enqueue_script( get_theme_text_domain() . '-feature' );
 		wp_enqueue_script_module( get_theme_text_domain() . '-main' );
-	}
-
-
-	/**
-	 * Preload scripts
-	 *
-	 * Preload scripts for faster loading.
-	 *
-	 * @access public
-	 * @return void
-	 */
-	public function preload_wp_scripts(): void {
-		global $wp_scripts;
-
-		foreach ( $wp_scripts->queue as $handle ) {
-			$script = $wp_scripts->registered[ $handle ];
-
-			if ( substr( $script->handle, 0, strlen( get_theme_text_domain() ) ) !== get_theme_text_domain() ) {
-				continue;
-			}
-
-			if ( isset( $script->extra['group'] ) && 1 === $script->extra['group'] ) {
-				$href = $script->src . ( $script->ver ? "?ver={$script->ver}" : '' );
-				echo '<link rel="preload" as="script" href="' . esc_attr( $href ) . '">';
-			}
-		}
 	}
 
 

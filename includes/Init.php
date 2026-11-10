@@ -44,7 +44,7 @@ class Init {
 			Plugins\ACF\IncludeFields\ThemeOptionsFields::class,
 			Plugins\ACF\Input\AdminEnqueueScripts::class,
 			Vite::class,
-			WalkerNavMenu::class,
+			NavMenuTemplate::class,
 		);
 	}
 

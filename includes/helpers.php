@@ -48,18 +48,3 @@ function html_class( $class = '' ): string {
 	return 'class="' . join( ' ', get_html_class( $class ) ) . '"';
 }
 
-
-/**
- * List webfonts used by the theme.
- *
- * Returns an array of name and url.
- *
- * @since  1.0.0
- * @return array
- * @access public
- */
-function get_webfonts(): array {
-	return array(
-		'inria-sans' => '//fonts.googleapis.com/css2?family=Inria+Sans:wght@400;700&display=block'
-	);
-}

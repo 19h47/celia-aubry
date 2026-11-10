@@ -1,8 +1,6 @@
 import { Piece } from "piecesjs";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(ScrollTrigger);
+const offset = 96;
 
 class Header extends Piece {
 	constructor() {
@@ -10,17 +8,20 @@ class Header extends Piece {
 	}
 
 	mount() {
-		ScrollTrigger.create({
-			start: "top -96px",
-			end: 'max',
-			onUpdate: ({ direction }) => {
-				if (direction === 1) {
-					gsap.to(this, { duration: 0.3, y: -100, ease: "none" });
-				} else {
-					gsap.to(this, { duration: 0.3, y: 0, ease: "none" });
-				}
-			},
-		});
+		this.scrollY = window.scrollY;
+		this.on("scroll", window, this.handleScroll);
+	}
+
+	unmount() {
+		this.off("scroll", window, this.handleScroll);
+	}
+
+	handleScroll() {
+		const { scrollY } = window;
+		const hidden = scrollY > offset && scrollY > this.scrollY;
+
+		this.classList.toggle("is-hidden", hidden);
+		this.scrollY = scrollY;
 	}
 }
 

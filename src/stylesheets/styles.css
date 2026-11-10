@@ -1,15 +1,40 @@
-@import "tailwindcss/base";
+@import "tailwindcss";
 
-@import "tailwindcss/components";
-@import "components/arrow.css";
-@import "components/breadcrumb.css";
-@import "components/button.css";
-@import "components/link.css";
-@import "components/wysiwyg.css";
+@import "./theme.css";
 
-@import "tailwindcss/utilities";
-@import "utilities/scrollbar.css";
-@import "utilities/typography.css";
+/* Base */
+@import "./base/base.css";
+
+/* Utilities */
+@import "./utilities/container.css";
+@import "./utilities/scrollbar.css";
+@import "./utilities/typography.css";
+@import "./utilities/view-transition.css";
+
+/* Components */
+@import "./components/arrow.css";
+@import "./components/breadcrumb.css";
+@import "./components/button.css";
+@import "./components/link.css";
+@import "./components/scroll.css";
+@import "./components/wysiwyg.css";
+
+/* Inria Sans: latin subset from Google Fonts, the weights it served (400 and 700). */
+@font-face {
+	font-family: "Inria Sans";
+	src: url("../fonts/inria-sans/inria-sans-regular.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Inria Sans";
+	src: url("../fonts/inria-sans/inria-sans-bold.woff2") format("woff2");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
 
 /* Maghfirea */
 @font-face {
@@ -17,5 +42,5 @@
 	src: url("../fonts/maghfirea/maghfirea-regular.woff2") format("woff2");
 	font-weight: 400;
 	font-style: normal;
-	font-display: block;
+	font-display: swap;
 }

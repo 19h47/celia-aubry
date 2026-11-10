@@ -20,7 +20,7 @@
 	a:hover .arrow-up-right {
 		animation-name: arrow-up-right-out, arrow-up-right-in;
 		animation-duration: 0.3s, 0.3s;
-		animation-timing-function: theme(transitionTimingFunction[in-out]);
+		animation-timing-function: var(--ease-in-out);
 		animation-delay: 0s, 0.3s;
 	}
 
@@ -45,7 +45,7 @@
 	a:hover .arrow-up-left {
 		animation-name: arrow-up-left-out, arrow-up-left-in;
 		animation-duration: 0.3s, 0.3s;
-		animation-timing-function: theme(transitionTimingFunction[in-out]);
+		animation-timing-function: var(--ease-in-out);
 		animation-delay: 0s, 0.3s;
 	}
 
@@ -70,7 +70,7 @@
 	a:hover .arrow-down, button:hover .arrow-down {
 		animation-name: arrow-down-out, arrow-down-in;
 		animation-duration: 0.3s, 0.3s;
-		animation-timing-function: theme(transitionTimingFunction[in-out]);
+		animation-timing-function: var(--ease-in-out);
 		animation-delay: 0s, 0.3s;
 	}
 }

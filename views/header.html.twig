@@ -6,7 +6,7 @@
  # @author Jérémy Levron <jeremylevron@19h47.fr> (https://19h47.fr)
  #}
 
-<c-header class="{{ html_classes( classes | default( [] ) | join( ' ' ), 'h-20 xl:h-24 fixed top-0 inset-x-0 bg-white z-2' ) }}">
+<c-header class="{{ html_classes( classes | default( [] ) | join( ' ' ), 'h-20 xl:h-24 fixed top-0 inset-x-0 bg-white z-2 transition-transform duration-300 ease-linear motion-reduce:transition-none [&.is-hidden:not(:focus-within)]:-translate-y-full' ) }}">
 
 	<div class="container px-4 flex justify-between items-center h-full xl:h-auto">
 
@@ -90,8 +90,8 @@
 	</div>
 </c-header>
 
-<c-nav class="fixed text-medium bg-white inset-0 size-full z-1 flex pt-20 flex-col text-center" style="opacity: 0; visibility: hidden;">
-	<div class="container flex flex-grow list-none overflow-auto scrollbar-hide">
+<c-nav class="fixed text-medium bg-white inset-0 size-full z-1 flex pt-20 flex-col text-center invisible opacity-0 transition-[opacity,visibility] duration-300 ease-in-out motion-reduce:transition-none [&.is-active]:visible [&.is-active]:opacity-100">
+	<div class="container flex grow list-none overflow-auto scrollbar-hide">
 
 		<c-accordion
 			class="space-y-12 m-auto py-10"
@@ -110,6 +110,7 @@
 									item.current or item.current_item_parent ? '' : '',
 									item.classes | join( ' ' ),
 								) }}"
+								id="{{ item.slug }}-header"
 								aria-expanded="false"
 								aria-controls="{{ item.slug }}"
 							>
@@ -118,7 +119,7 @@
 							</button>
 
 							{%- if item.children -%}
-								<div id="{{ item.slug }}" role="region" class="duration-300 ease-linear transition-[max-height]">
+								<div id="{{ item.slug }}" role="region" aria-labelledby="{{ item.slug }}-header" class="duration-300 ease-linear transition-[max-height]">
 									<ul class="space-y-6 pt-6 js-accordion-inner">
 										{%- for child in item.children -%}
 											<li>
@@ -166,7 +167,7 @@
 
 	</div>
 
-	<footer class="bg-brand-jaune flex-shrink">
+	<footer class="bg-brand-jaune shrink">
 		<div class="container my-10">
 			{{ authordescription | nl2br }}
 			<br><a class="font-bold" href="{{ public_email }}">{{- public_email -}}</a>
